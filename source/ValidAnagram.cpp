@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 
 /**************** Valid Anagram **********************/
@@ -10,7 +10,7 @@ using namespace std;
  s = "rat", t = "car", return false.
 */
 
-bool Solution::isAnagram(string s, string t) {
+bool Solutions::isAnagram(string s, string t) {
     if (s.size() != t.size()) {
         return false;
     }

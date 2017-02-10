@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 
 /*************** Best Time to Buy and Sell Stock II ****************/
@@ -8,7 +8,7 @@ using namespace std;
  Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
 */
 
-int Solution::maxProfit(vector<int>& prices) {
+int Solutions::maxProfit(vector<int>& prices) {
     if (prices.size() <= 1 ) {
         return 0;
     }

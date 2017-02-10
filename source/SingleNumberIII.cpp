@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 
 /*************** Single Number III **************/
@@ -10,7 +10,7 @@ using namespace std;
  Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].
 */
 
-vector<int> Solution::singleNumber(vector<int>& nums) {
+vector<int> Solutions::singleNumber(vector<int>& nums) {
     int allXOR = 0;
     for (int num : nums) {
         allXOR ^= num;

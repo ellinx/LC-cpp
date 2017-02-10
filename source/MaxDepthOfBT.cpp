@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 
 /*********** Maximum Depth of Binary Tree *************/
@@ -8,7 +8,7 @@ using namespace std;
  The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 */
 
-int Solution::maxDepth(TreeNode* root) {
+int Solutions::maxDepth(TreeNode* root) {
     if (root == NULL) {
         return 0;
     }

@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 
 
@@ -10,7 +10,7 @@ using namespace std;
 
  For example, given [1,2,3,4], return [24,12,8,6].
 */
-vector<int> Solution::productExceptSelf(vector<int>& nums) {
+vector<int> Solutions::productExceptSelf(vector<int>& nums) {
     vector<int> res(nums.size());
     res[0] = 1;
 

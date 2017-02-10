@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 
 /************* Invert Binary Tree ****************/
@@ -20,7 +20,7 @@ using namespace std;
 
 */
 
-TreeNode* Solution::invertTree(TreeNode* root) {
+TreeNode* Solutions::invertTree(TreeNode* root) {
     if (root == NULL) {
         return root;
     }

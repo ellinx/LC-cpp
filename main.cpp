@@ -6,12 +6,12 @@
 //
 //
 
-#include "Solution.hpp"
+#include "Solutions.hpp"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    Solution dummy;
+    Solutions dummy;
     
     /*int num = 2;
     

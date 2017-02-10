@@ -1,13 +1,14 @@
 
-#ifndef Solution_hpp
-#define Solution_hpp
+#ifndef Solutions_hpp
+#define Solutions_hpp
 
-#include <stdio.h>
 #include <vector>
 #include <string>
 #include <cstring>
 #include <iostream>
 #include <stack>
+#include <set>
+#include <map>
 
 using namespace std;
 
@@ -24,7 +25,7 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
  };
 
-class Solution{
+class Solutions{
 private:
     vector<string> generateParenthesisHelper(int left, int right);
 public:
@@ -47,4 +48,4 @@ public:
 };
 
 
-#endif /* Solution_hpp */
+#endif /* Solutions_hpp */

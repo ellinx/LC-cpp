@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 /************ Permutations ****************/
 /*
@@ -8,7 +8,7 @@ using namespace std;
  [1,2,3] have the following permutations:
  [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], and [3,2,1].
 */
-vector<vector<int>> Solution::permute(vector<int>& nums) {
+vector<vector<int>> Solutions::permute(vector<int>& nums) {
     vector<vector<int>> res;
     if (nums.size() == 1) {
         res.push_back(nums);

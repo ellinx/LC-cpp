@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 
 /**************** Intersection of Two Arrays *********************/
@@ -9,7 +9,7 @@ using namespace std;
  Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].
 */
 
-vector<int> Solution::intersection(vector<int>& nums1, vector<int>& nums2) {
+vector<int> Solutions::intersection(vector<int>& nums1, vector<int>& nums2) {
     sort(nums1.begin(), nums1.end());
     sort(nums2.begin(), nums2.end());
 

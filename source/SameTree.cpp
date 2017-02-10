@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 
 /************** Same Tree *****************/
@@ -8,7 +8,7 @@ using namespace std;
  Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
 */
 
-bool Solution::isSameTree(TreeNode* p, TreeNode* q) {
+bool Solutions::isSameTree(TreeNode* p, TreeNode* q) {
     if (p == NULL && q == NULL) {
         return true;
     }

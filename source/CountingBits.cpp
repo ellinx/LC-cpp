@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 /******* Counting Bits *************/
 /*
@@ -7,7 +7,7 @@ using namespace std;
  Example:
  For num = 5 you should return [0,1,1,2,1,2].
 */
-vector<int> Solution::countBits(int num) {
+vector<int> Solutions::countBits(int num) {
         vector<int> res;
         for (int i = 0; i <= num; i++) {
             int count = 0;

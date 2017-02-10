@@ -1,4 +1,4 @@
-#include "Solution.hpp"
+#include "Solutions.hpp"
 using namespace std;
 
 /************** Generate Parentheses ****************/
@@ -9,11 +9,11 @@ using namespace std;
 
  "((()))", "(()())", "(())()", "()(())", "()()()"
 */
-vector<string> Solution::generateParenthesis(int n) {
+vector<string> Solutions::generateParenthesis(int n) {
     return generateParenthesisHelper(n,n);
 }
 
-vector<string> Solution::generateParenthesisHelper(int left, int right){
+vector<string> Solutions::generateParenthesisHelper(int left, int right){
     vector<string> res;
     if (left > 0) {
         vector<string> pre_result = generateParenthesisHelper(left-1, right);
