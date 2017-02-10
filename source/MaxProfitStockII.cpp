@@ -1,4 +1,4 @@
-#include "Solutions.hpp"
+#include "../Solutions.hpp"
 using namespace std;
 
 /*************** Best Time to Buy and Sell Stock II ****************/

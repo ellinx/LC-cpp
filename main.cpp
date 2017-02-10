@@ -9,6 +9,7 @@
 #include "Solutions.hpp"
 
 using namespace std;
+void printVector(vector<int>& vec);
 
 int main(int argc, const char * argv[]) {
     Solutions dummy;
@@ -29,4 +30,17 @@ int main(int argc, const char * argv[]) {
     nums.push_back(9);
     dummy.moveZeroes(nums);
     return 0;
+}
+
+
+//
+void printVector(vector<int>& vec) {
+	cout<<"[";
+	for (int i=0;i<vec.size();i++) {
+		cout<<vec[i];
+		if (i<vec.size()-1) {
+			cout<<",";
+		}
+	}
+	cout<<"]"<<endl;
 }

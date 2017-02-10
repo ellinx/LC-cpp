@@ -2,13 +2,17 @@
 #ifndef Solutions_hpp
 #define Solutions_hpp
 
+#include <iostream>
+#include <utility>
+#include <algorithm>
 #include <vector>
 #include <string>
 #include <cstring>
-#include <iostream>
 #include <stack>
 #include <set>
+#include <unordered_set>
 #include <map>
+#include <unordered_map>
 
 using namespace std;
 
@@ -45,6 +49,7 @@ public:
     bool isAnagram(string s, string t);
     int getSum(int a, int b);
     bool exist(vector<vector<char>>& board, string word);
+	bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites);
 };
 
 

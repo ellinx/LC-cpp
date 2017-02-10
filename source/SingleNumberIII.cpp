@@ -1,4 +1,4 @@
-#include "Solutions.hpp"
+#include "../Solutions.hpp"
 using namespace std;
 
 /*************** Single Number III **************/
