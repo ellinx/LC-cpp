@@ -50,6 +50,8 @@ public:
     int getSum(int a, int b);
     bool exist(vector<vector<char>>& board, string word);
 	bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites);
+	vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites);
+	int minSubArrayLen(int s, vector<int>& nums);
 };
 
 

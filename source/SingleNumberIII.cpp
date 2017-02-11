@@ -23,7 +23,7 @@ vector<int> Solutions::singleNumber(vector<int>& nums) {
     }
 
     int dif = 1 << set_position;
-    vector<int> res{0,0};
+    vector<int> res(2,0);
     for (int num : nums) {
         if ((num & dif) == 0) {
             res[0] ^= num;
