@@ -19,7 +19,8 @@ int Solutions::minSubArrayLen(int s, vector<int>& nums) {
 	int res=INT_MAX;
 	int start=0;
 	int end=0;
-	int sum=0;
+    if (nums.empty()) return 0;
+	int sum=nums[0];
 	while (start<nums.size() && end<nums.size()) {
 		if (sum>=s) {
 			if (end-start+1<res) {
@@ -33,7 +34,6 @@ int Solutions::minSubArrayLen(int s, vector<int>& nums) {
 				sum += nums[end];
 			}
 		}
-		cout<<"start="<<start<<", end="<<end<<endl;
 	}
 	if (res==INT_MAX) return 0;
 	return res;
