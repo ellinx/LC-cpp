@@ -14,8 +14,16 @@ int main() {
     nums.push_back(2);
     nums.push_back(4);
 	nums.push_back(3);
-	printVector(nums);
-    int result = dummy.minSubArrayLen(7, nums);
+
+	vector<string> words;
+	words.push_back("hot");
+	words.push_back("dot");
+	words.push_back("dog");
+	words.push_back("lot");
+	words.push_back("log");
+	words.push_back("cog");
+
+    int result = dummy.ladderLength("hit", "cog", words);
 	cout<<"result is:"<<endl;
 	cout<<result<<endl;
     return 0;
