@@ -55,6 +55,7 @@ public:
 	vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites);
 	int minSubArrayLen(int s, vector<int>& nums);
 	int ladderLength(string beginWord, string endWord, vector<string>& wordList);
+	void reverseWords(string &s);
 };
 
 

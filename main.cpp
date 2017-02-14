@@ -23,7 +23,8 @@ int main() {
 	words.push_back("log");
 	words.push_back("cog");
 
-    int result = dummy.ladderLength("hit", "cog", words);
+    string result = "the sky is blue";
+	dummy.reverseWords(result);
 	cout<<"result is:"<<endl;
 	cout<<result<<endl;
     return 0;
