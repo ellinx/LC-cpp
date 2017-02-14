@@ -13,6 +13,8 @@
 #include <unordered_set>
 #include <map>
 #include <unordered_map>
+#include <queue>
+#include <list>
 
 using namespace std;
 
@@ -53,6 +55,8 @@ public:
 	vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites);
 	int minSubArrayLen(int s, vector<int>& nums);
     int maxProduct(vector<int>& nums);
+	int ladderLength(string beginWord, string endWord, vector<string>& wordList);
+	void reverseWords(string &s);
 };
 
 
