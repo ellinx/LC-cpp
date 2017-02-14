@@ -52,6 +52,7 @@ public:
 	bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites);
 	vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites);
 	int minSubArrayLen(int s, vector<int>& nums);
+    int maxProduct(vector<int>& nums);
 };
 
 
