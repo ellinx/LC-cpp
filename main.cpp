@@ -23,7 +23,7 @@ int main() {
 	words.push_back("log");
 	words.push_back("cog");
 
-    int result = dummy.numDecodings("27");
+    int result = dummy.numDecodings("10");
 	
 	cout<<"result is:"<<endl;
 	cout<<result<<endl;
