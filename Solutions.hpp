@@ -60,6 +60,7 @@ public:
 	void reverseWords(string &s);
 	int numDecodings(string s);
     int threeSumClosest(vector<int>& nums, int target);
+	vector<vector<int>> threeSum(vector<int>& nums);
 };
 
 

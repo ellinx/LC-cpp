@@ -9,11 +9,11 @@ int main() {
     Solutions dummy;  
     vector<int> nums;
     nums.push_back(-1);
-    nums.push_back(2);
+    nums.push_back(0);
     nums.push_back(1);
-    nums.push_back(-4);
-    //nums.push_back(4);
-	//nums.push_back(3);
+    nums.push_back(2);
+    nums.push_back(-1);
+	nums.push_back(-4);
     printVector(nums);
 
 	vector<string> words;
@@ -24,10 +24,14 @@ int main() {
 	words.push_back("log");
 	words.push_back("cog");
 
-    int result = dummy.threeSumClosest(nums,1);
+    vector<vector<int>> result = dummy.threeSum(nums);
 	
 	cout<<"result is:"<<endl;
-	cout<<result<<endl;
+	cout<<"["<<endl;
+	for (int i=0;i<result.size();i++) {
+		printVector(result[i]);
+	}
+	cout<<"]";
     return 0;
 }
 
