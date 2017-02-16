@@ -23,8 +23,8 @@ int main() {
 	words.push_back("log");
 	words.push_back("cog");
 
-    string result = "the sky is blue";
-	dummy.reverseWords(result);
+    int result = dummy.numDecodings("27");
+	
 	cout<<"result is:"<<endl;
 	cout<<result<<endl;
     return 0;

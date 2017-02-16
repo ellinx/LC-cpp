@@ -57,6 +57,7 @@ public:
     int maxProduct(vector<int>& nums);
 	int ladderLength(string beginWord, string endWord, vector<string>& wordList);
 	void reverseWords(string &s);
+	int numDecodings(string s);
 };
 
 
