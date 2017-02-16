@@ -8,12 +8,13 @@ void printVector(vector<int>& vec);
 int main() {
     Solutions dummy;  
     vector<int> nums;
+    nums.push_back(-1);
     nums.push_back(2);
-    nums.push_back(3);
     nums.push_back(1);
-    nums.push_back(2);
-    nums.push_back(4);
-	nums.push_back(3);
+    nums.push_back(-4);
+    //nums.push_back(4);
+	//nums.push_back(3);
+    printVector(nums);
 
 	vector<string> words;
 	words.push_back("hot");
@@ -23,7 +24,7 @@ int main() {
 	words.push_back("log");
 	words.push_back("cog");
 
-    int result = dummy.numDecodings("10");
+    int result = dummy.threeSumClosest(nums,1);
 	
 	cout<<"result is:"<<endl;
 	cout<<result<<endl;

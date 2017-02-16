@@ -5,6 +5,7 @@
 #include <iostream>
 #include <utility>
 #include <algorithm>
+#include <cmath>
 #include <vector>
 #include <string>
 #include <cstring>
@@ -58,6 +59,7 @@ public:
 	int ladderLength(string beginWord, string endWord, vector<string>& wordList);
 	void reverseWords(string &s);
 	int numDecodings(string s);
+    int threeSumClosest(vector<int>& nums, int target);
 };
 
 
