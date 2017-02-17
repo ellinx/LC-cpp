@@ -54,7 +54,7 @@ public:
     vector<int> singleNumber(vector<int>& nums);
     bool isSameTree(TreeNode* p, TreeNode* q);
     vector<int> topKFrequent(vector<int>& nums, int k);
-    int maxProfit(vector<int>& prices);
+    int maxProfitII(vector<int>& prices);
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2);
     bool isAnagram(string s, string t);
     int getSum(int a, int b);
@@ -71,6 +71,7 @@ public:
 	string multiply(string num1, string num2);
 	bool isValidBST(TreeNode* root);
     int totalHammingDistance(vector<int>& nums);
+	int maxProfit(vector<int>& prices);
 };
 
 
