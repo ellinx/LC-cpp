@@ -61,6 +61,7 @@ public:
 	int numDecodings(string s);
     int threeSumClosest(vector<int>& nums, int target);
 	vector<vector<int>> threeSum(vector<int>& nums);
+	string multiply(string num1, string num2);
 };
 
 

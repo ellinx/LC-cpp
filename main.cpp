@@ -14,7 +14,7 @@ int main() {
     nums.push_back(2);
     nums.push_back(-1);
 	nums.push_back(-4);
-    printVector(nums);
+    //printVector(nums);
 
 	vector<string> words;
 	words.push_back("hot");
@@ -24,14 +24,10 @@ int main() {
 	words.push_back("log");
 	words.push_back("cog");
 
-    vector<vector<int>> result = dummy.threeSum(nums);
+    string result = dummy.multiply("0","9912");
 	
 	cout<<"result is:"<<endl;
-	cout<<"["<<endl;
-	for (int i=0;i<result.size();i++) {
-		printVector(result[i]);
-	}
-	cout<<"]";
+	cout<<result<<endl;
     return 0;
 }
 
