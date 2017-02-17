@@ -63,6 +63,7 @@ public:
 	vector<vector<int>> threeSum(vector<int>& nums);
 	string multiply(string num1, string num2);
 	bool isValidBST(TreeNode* root);
+    int totalHammingDistance(vector<int>& nums);
 };
 
 
