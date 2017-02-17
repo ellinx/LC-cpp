@@ -72,6 +72,8 @@ public:
 	bool isValidBST(TreeNode* root);
     int totalHammingDistance(vector<int>& nums);
 	int maxProfit(vector<int>& prices);
+	vector<int> maxSlidingWindow(vector<int>& nums, int k);
+	int divide(int dividend, int divisor);
 };
 
 
