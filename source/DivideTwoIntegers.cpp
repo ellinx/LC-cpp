@@ -9,19 +9,21 @@ using namespace std;
 If it is overflow, return MAX_INT. 
 */
 
+//Note "long" vs "long long"
+
 int Solutions::divide(int dividend, int divisor) {
 	if (divisor==0) return INT_MAX;
 	if (dividend==0) return 0;
 	int flag=1;
-	long a = dividend;
-	long b = divisor;
+	long long a = dividend;
+	long long b = divisor;
 	if (a<0 && b<0) {
 		a *= -1;
 		b *= -1;
-	}else if ( a<0 && b>0) {
+	} else if ( a<0 && b>0) {
 		a *= -1;
 		flag = -1;
-	} else if (a>=0 && b<0) {
+	} else if (a>0 && b<0) {
 		b *= -1;
 		flag = -1;
 	}
@@ -29,8 +31,8 @@ int Solutions::divide(int dividend, int divisor) {
 	long res=0;
 
     while (a>=b) {
-    	int sum=b;
-		int num=1;
+    	long long sum=b;
+		long long num=1;
 		while(a>=sum) {
 			sum <<= 1;
 			num <<= 1;

@@ -10,14 +10,14 @@ void printVector(vector<string>& vec);
 int main() {
     Solutions dummy;  
     vector<int> nums;
+    nums.push_back(100);
+    nums.push_back(4);
+    nums.push_back(200);
     nums.push_back(1);
     nums.push_back(3);
-    nums.push_back(-1);
-    nums.push_back(-3);
-    nums.push_back(5);
-	nums.push_back(3);
-	nums.push_back(6);
-	nums.push_back(7);
+	nums.push_back(2);
+	//nums.push_back(6);
+	//nums.push_back(7);
     //printVector(nums);
 
 	vector<string> words;
@@ -28,7 +28,7 @@ int main() {
 	words.push_back("log");
 	words.push_back("cog");
 
-    int result = dummy.divide(3,3);
+    int result = dummy.divide(2147483647,2);
 	cout<<"result is:"<<endl;
 	cout<<result<<endl;
     return 0;
