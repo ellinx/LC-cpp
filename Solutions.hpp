@@ -75,6 +75,8 @@ public:
 	vector<int> maxSlidingWindow(vector<int>& nums, int k);
 	int divide(int dividend, int divisor);
 	int longestConsecutive(vector<int>& nums);
+    vector<string> removeInvalidParentheses(string s);
+    vector<Interval> insert(vector<Interval>& intervals, Interval newInterval);
 };
 
 

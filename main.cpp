@@ -28,9 +28,10 @@ int main() {
 	words.push_back("log");
 	words.push_back("cog");
 
-    int result = dummy.divide(2147483647,2);
+    vector<string> result = dummy.removeInvalidParentheses("()())()");
 	cout<<"result is:"<<endl;
-	cout<<result<<endl;
+    printVector(result);
+	//cout<<result<<endl;
     return 0;
 }
 
