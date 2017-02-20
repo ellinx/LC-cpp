@@ -77,6 +77,8 @@ public:
 	int longestConsecutive(vector<int>& nums);
     vector<string> removeInvalidParentheses(string s);
     vector<Interval> insert(vector<Interval>& intervals, Interval newInterval);
+    ListNode* reverseList(ListNode* head);
+    string countAndSay(int n);
 };
 
 

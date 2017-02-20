@@ -28,10 +28,10 @@ int main() {
 	words.push_back("log");
 	words.push_back("cog");
 
-    vector<string> result = dummy.removeInvalidParentheses("()())()");
+    string result = dummy.countAndSay(4);
 	cout<<"result is:"<<endl;
-    printVector(result);
-	//cout<<result<<endl;
+    //printVector(result);
+	cout<<result<<endl;
     return 0;
 }
 
