@@ -16,8 +16,9 @@ int main() {
     
     string words[] = {"leet","code","cog"};
     
-    int input_type = INPUT_VEC_STR;
+    int input_type = INPUT_MANUAL;
     
+    cout<<"Input:";
     switch(input_type) {
         case INPUT_VEC_INT:
             vec_int = InitVectorInt(nums, 7);
@@ -26,12 +27,11 @@ int main() {
             vec_string = InitVectorString(words, 3);
             break;
         default:
-            cout<<"Wrong input type, initialization fails!"<<endl;
             break;
     }
     
 
-    bool result = dummy.wordBreak("leetcode",vec_string);
+    string result = dummy.decodeString("3[a]2[bc]");
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;

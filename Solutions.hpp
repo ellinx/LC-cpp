@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <utility>
+#include <locale>
 #include <algorithm>
 #include <cmath>
 #include <vector>
@@ -19,8 +20,9 @@
 
 using namespace std;
 
-#define INPUT_VEC_INT (0)
-#define INPUT_VEC_STR (1)
+#define INPUT_MANUAL (0)
+#define INPUT_VEC_INT (1)
+#define INPUT_VEC_STR (2)
 
 struct TreeNode {
     int val;
@@ -40,6 +42,12 @@ struct Interval {
     int end;
     Interval() : start(0), end(0) {}
     Interval(int s, int e) : start(s), end(e) {}
+};
+
+struct UndirectedGraphNode {
+    int label;
+    vector<UndirectedGraphNode *> neighbors;
+    UndirectedGraphNode(int x) : label(x) {};
 };
 
 class Solutions{
@@ -87,6 +95,12 @@ public:
     bool wordBreak(string s, vector<string>& wordDict);
     string serialize(TreeNode* root);
     TreeNode* deserialize(string data);
+    string numberToWords(int num);
+    string addBinary(string a, string b) ;
+    UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node);
+    void nextPermutation(vector<int>& nums);
+    string decodeString(string s);
+    vector<string> binaryTreePaths(TreeNode* root);
 };
 
 
