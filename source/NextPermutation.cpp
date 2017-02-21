@@ -17,5 +17,43 @@ using namespace std;
 */
 
 void Solutions::nextPermutation(vector<int>& nums) {
-    
+	int k=-1;
+    for (int i=nums.size()-1;i>0;i--) {
+		if (nums[i-1]<nums[i]) {
+			k = i-1;
+			break;
+		}
+	}
+
+	int first = 0;
+	int second = nums.size()-1;
+	if (k==-1) {
+		while(first<second) {
+			int tmp = nums[second];
+			nums[second] = nums[first];
+			nums[first] = tmp;
+			first++;
+			second--;
+		}
+		return;
+	}
+
+	for (int i=nums.size()-1;i>k;i--) {
+		if (nums[i]>nums[k]) {
+			int tmp = nums[k];
+			nums[k] = nums[i];
+			nums[i] = tmp;
+			break;
+		}
+	}
+
+	first = k+1;
+	second = nums.size()-1;
+	while(first<second) {
+		int tmp = nums[second];
+		nums[second] = nums[first];
+		nums[first] = tmp;
+		first++;
+		second--;
+	}
 }

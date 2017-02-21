@@ -12,7 +12,7 @@ int main() {
     vector<int> vec_int;
     vector<string> vec_string;
 
-    int nums[] = {1,2,3,4,5,6,7};
+    int nums[] = {1,1,5};
     
     string words[] = {"leet","code","cog"};
     
@@ -21,7 +21,7 @@ int main() {
     switch(input_type) {
         case INPUT_VEC_INT:
             cout<<"Input:";
-            vec_int = InitVectorInt(nums, 7);
+            vec_int = InitVectorInt(nums, 3);
             break;
         case INPUT_VEC_STR:
             cout<<"Input:";
@@ -32,7 +32,7 @@ int main() {
     }
     
 
-    string result = dummy.decodeString("2[abc]3[cd]ef");
+    string result = dummy.numberToWords(100010);
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;
