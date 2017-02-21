@@ -28,7 +28,7 @@ int main() {
 	words.push_back("log");
 	words.push_back("cog");
 
-    string result = dummy.countAndSay(4);
+    string result = dummy.minWindow("A","AA");
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;

@@ -79,6 +79,9 @@ public:
     vector<Interval> insert(vector<Interval>& intervals, Interval newInterval);
     ListNode* reverseList(ListNode* head);
     string countAndSay(int n);
+    vector<string> letterCombinations(string digits);
+    string minWindow(string s, string t);
+    bool wordBreak(string s, vector<string>& wordDict);
 };
 
 
