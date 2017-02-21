@@ -6,30 +6,34 @@ using namespace std;
 
 void printVector(vector<int>& vec);
 void printVector(vector<string>& vec);
+vector<int> InitVectorInt(int* array, int n);
+vector<string> InitVectorString(string* array, int n);
 
 int main() {
-    Solutions dummy;  
-    vector<int> nums;
-    nums.push_back(100);
-    nums.push_back(4);
-    nums.push_back(200);
-    nums.push_back(1);
-    nums.push_back(3);
-	nums.push_back(2);
-	//nums.push_back(6);
-	//nums.push_back(7);
-    //printVector(nums);
+    Solutions dummy;
+    vector<int> vec_int;
+    vector<string> vec_string;
 
-	vector<string> words;
-	words.push_back("leet");
-	words.push_back("code");
-	words.push_back("dog");
-	words.push_back("lot");
-	words.push_back("log");
-	words.push_back("cog");
-    printVector(words);
+    int nums[] = {1,2,3,4,5,6,7};
+    
+    string words[] = {"leet","code","cog"};
+    
+    int input_type = INPUT_VEC_STR;
+    
+    switch(input_type) {
+        case INPUT_VEC_INT:
+            vec_int = InitVectorInt(nums, 7);
+            break;
+        case INPUT_VEC_STR:
+            vec_string = InitVectorString(words, 3);
+            break;
+        default:
+            cout<<"Wrong input type, initialization fails!"<<endl;
+            break;
+    }
+    
 
-    bool result = dummy.wordBreak("leetcode",words);
+    bool result = dummy.wordBreak("leetcode",vec_string);
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;
@@ -37,7 +41,26 @@ int main() {
 }
 
 
-//
+//Initialization functions
+vector<int> InitVectorInt(int* array, int n) {
+    vector<int> res;
+    for (int i=0;i<n;i++) {
+        res.push_back(array[i]);
+    }
+    printVector(res);
+    return res;
+}
+
+vector<string> InitVectorString(string* array, int n) {
+    vector<string> res;
+    for (int i=0;i<n;i++) {
+        res.push_back(array[i]);
+    }
+    printVector(res);
+    return res;
+}
+
+//print functions
 void printVector(vector<int>& vec) {
 	cout<<"[";
 	for (int i=0;i<vec.size();i++) {

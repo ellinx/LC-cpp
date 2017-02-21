@@ -19,6 +19,9 @@
 
 using namespace std;
 
+#define INPUT_VEC_INT (0)
+#define INPUT_VEC_STR (1)
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -82,6 +85,8 @@ public:
     vector<string> letterCombinations(string digits);
     string minWindow(string s, string t);
     bool wordBreak(string s, vector<string>& wordDict);
+    string serialize(TreeNode* root);
+    TreeNode* deserialize(string data);
 };
 
 
