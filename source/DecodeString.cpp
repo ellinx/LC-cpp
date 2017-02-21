@@ -28,20 +28,28 @@ string Solutions::decodeString(string s) {
     if (s.empty()) return res;
     
     while (end<s.size()) {
-        if (s[end]>'0' && s[end]<='9') {
-            if (isdigit(s[start])) end++;
-            else if (s[start]=='[') end++;
-            else {
-                res += s.substr(start,end-start);
-                start = ++end;
+        if (s[start]=='[') {
+            stack<char> sk;
+            while (s[end]!=']' || !sk.empty()) {
+                if (s[end]=='[') sk.push('[');
+                if (s[end]==']') sk.pop();
+                end++;
             }
-        } else if (s[end]==']'){
             while (repeat>0) {
                 res += decodeString(s.substr(start+1,end-start-1));
                 repeat--;
             }
             start = ++end;
-        } else if (s[end]=='[') {
+            continue;
+        }
+        if (s[end]>'0' && s[end]<='9') {
+            if (isdigit(s[start])) end++;
+            else if (s[start]=='[') end++;
+            else {
+                res += s.substr(start,end-start);
+                start = end++;
+            }
+        }else if (s[end]=='[') {
             repeat = stoi(s.substr(start,end-start));
             start = end++;
         } else {

@@ -18,12 +18,13 @@ int main() {
     
     int input_type = INPUT_MANUAL;
     
-    cout<<"Input:";
     switch(input_type) {
         case INPUT_VEC_INT:
+            cout<<"Input:";
             vec_int = InitVectorInt(nums, 7);
             break;
         case INPUT_VEC_STR:
+            cout<<"Input:";
             vec_string = InitVectorString(words, 3);
             break;
         default:
@@ -31,7 +32,7 @@ int main() {
     }
     
 
-    string result = dummy.decodeString("3[a]2[bc]");
+    string result = dummy.decodeString("2[abc]3[cd]ef");
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;
