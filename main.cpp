@@ -1,5 +1,3 @@
-
-
 #include "Solutions.hpp"
 
 using namespace std;
