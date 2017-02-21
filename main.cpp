@@ -21,14 +21,15 @@ int main() {
     //printVector(nums);
 
 	vector<string> words;
-	words.push_back("hot");
-	words.push_back("dot");
+	words.push_back("leet");
+	words.push_back("code");
 	words.push_back("dog");
 	words.push_back("lot");
 	words.push_back("log");
 	words.push_back("cog");
+    printVector(words);
 
-    string result = dummy.minWindow("A","AA");
+    bool result = dummy.wordBreak("leetcode",words);
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;
