@@ -37,25 +37,42 @@ using namespace std;
 */
 
 class RandomizedSet {
+	unordered_map<int,int> dataMap;
+	vector<int> data;
 public:
     /** Initialize your data structure here. */
     RandomizedSet() {
-        
+		dataMap.clear();
+		data.clear();
     }
     
     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
     bool insert(int val) {
-        return true;
+        if (dataMap.find(val)==dataMap.end()) {
+			data.push_back(val);
+			dataMap.emplace(val,data.size()-1);
+			return true;
+		} else return false;
     }
     
     /** Removes a value from the set. Returns true if the set contained the specified element. */
     bool remove(int val) {
-        return true;
+		auto iter = dataMap.find(val);
+        if (iter==dataMap.end()) {
+			return false;
+		} else {
+			data[iter->second] = data.back();
+			dataMap[data[iter->second]] = iter->second;
+			data.pop_back();
+			dataMap.erase(val);
+			return true;
+		}
     }
     
     /** Get a random element from the set. */
     int getRandom() {
-        return 0;
+        int index = rand()%(data.size());
+		return data[index];
     }
 };
 

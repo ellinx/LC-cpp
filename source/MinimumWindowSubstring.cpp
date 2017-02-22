@@ -18,6 +18,39 @@ using namespace std;
 */
 
 string Solutions::minWindow(string s, string t) {
+	vector<int> chars(128,0);
+	for (int i=0;i<t.size();i++) {
+		chars[t[i]]++;
+	}
+
+	int start = 0;
+	int end = 0;
+	int head = 0;
+	int length = -1;
+	int count = t.size();
+	chars[s[0]]--;
+	if (chars[s[0]]>=0) count--;
+	while (end < s.size()) {
+		if (count==0) {
+			if (length<0 || length>end-start+1) {
+				head = start;
+				length = end-start+1;
+			}
+			chars[s[start]]++;
+			if (chars[s[start]]>0) count++;
+			start++;
+		} else {
+			end++;
+			chars[s[end]]--;
+			if (chars[s[end]]>=0) count--;
+		}
+	}
+	cout<<"length="<<length<<endl;
+	return (length>0)?s.substr(head,length):"";
+}
+
+#if 0
+string Solutions::minWindow(string s, string t) {
     unordered_map<char,int> tSet;
     unordered_map<char,int> unused;
     unordered_map<char,int> used;
@@ -90,3 +123,4 @@ string Solutions::minWindow(string s, string t) {
     }
     return res;
 }
+#endif

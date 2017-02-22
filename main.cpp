@@ -32,7 +32,7 @@ int main() {
     }
     
 
-    string result = dummy.numberToWords(100010);
+    string result = dummy.minWindow("ADOBECODEBANC","ABC");
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;

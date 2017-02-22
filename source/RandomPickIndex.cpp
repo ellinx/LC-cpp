@@ -22,13 +22,19 @@ using namespace std;
 */
 
 class Solution {
+vector<int> data;
 public:
     Solution(vector<int> nums) {
-        
+		data = vector<int>(nums.begin(),nums.end());
     }
     
     int pick(int target) {
-        return 0;
+        vector<int> tmp;
+		for (int i=0;i<data.size();i++) {
+			if (data[i]==target) tmp.push_back(i);
+		}
+		int index = rand()%(tmp.size());
+		return tmp[index];
     }
 };
 
