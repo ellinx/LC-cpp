@@ -101,6 +101,9 @@ public:
     void nextPermutation(vector<int>& nums);
     string decodeString(string s);
     vector<string> binaryTreePaths(TreeNode* root);
+    ListNode* mergeKLists(vector<ListNode*>& lists);
+    bool isOneEditDistance(string s, string t);
+    string longestPalindrome(string s);
 };
 
 

@@ -32,10 +32,11 @@ int main() {
     }
     
 
-    string result = dummy.minWindow("ADOBECODEBANC","ABC");
+    string result = dummy.longestPalindrome("babad");
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;
+    
     return 0;
 }
 
