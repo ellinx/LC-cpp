@@ -8,30 +8,15 @@ using namespace std;
  For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
 */
 void Solutions::moveZeroes(vector<int>& nums) {
-    int zero = 0;
-    int noneZero = 0;
-    while (noneZero < nums.size()) {
-        if (nums[zero] != 0) {
-            zero++;
-        } else {
-            if (noneZero == 0) {
-                noneZero = zero + 1;
-            } else {
-                while (noneZero < nums.size()) {
-                    if (nums[noneZero] == 0) {
-                        noneZero++;
-                    } else {
-                        break;
-                    }
-                }
-                if (noneZero < nums.size()) {
-                    nums[zero] = nums[noneZero];
-                    nums[noneZero] = 0;
-                    zero++;
-                    noneZero++;
-                }
-            }
+    int index1=0;
+    int index2=0;
+    while (index2<nums.size()) {
+        if (nums[index2]==0) index2++;
+        else {
+            nums[index1++] = nums[index2++];
         }
-        //cout<< "Z=" << zero <<"; NZ=" << noneZero <<endl;
+    }
+    while (index1<nums.size()) {
+        nums[index1++] = 0;
     }
 }

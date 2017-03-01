@@ -6,17 +6,21 @@ void printVector(vector<int>& vec);
 void printVector(vector<string>& vec);
 vector<int> InitVectorInt(int* array, int n);
 vector<string> InitVectorString(string* array, int n);
+vector<Interval> InitVectorInterval(Interval* array, int n);
 
 int main() {
     Solutions dummy;
     vector<int> vec_int;
     vector<string> vec_string;
+    vector<Interval> vec_interval;
 
     int nums[] = {1,1,5};
     
     string words[] = {"leet","code","cog"};
     
-    int input_type = INPUT_MANUAL;
+    Interval intervals[] = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
+    
+    int input_type = INPUT_VEC_INTERVALS;
     
     switch(input_type) {
         case INPUT_VEC_INT:
@@ -27,12 +31,16 @@ int main() {
             cout<<"Input:";
             vec_string = InitVectorString(words, 3);
             break;
+        case INPUT_VEC_INTERVALS:
+            cout<<"Input:";
+            vec_interval = InitVectorInterval(intervals, 4);
+            break;
         default:
             break;
     }
     
 
-    string result = dummy.longestPalindrome("babad");
+    int result = dummy.minMeetingRooms(vec_interval);
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;
@@ -57,6 +65,14 @@ vector<string> InitVectorString(string* array, int n) {
         res.push_back(array[i]);
     }
     printVector(res);
+    return res;
+}
+
+vector<Interval> InitVectorInterval(Interval* array, int n) {
+    vector<Interval> res;
+    for (int i=0;i<n;i++) {
+        res.push_back(array[i]);
+    }
     return res;
 }
 

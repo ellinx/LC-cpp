@@ -10,7 +10,7 @@ using namespace std;
  Given [1,3],[2,6],[8,10],[15,18],
  return [1,6],[8,10],[15,18].
 */
-static bool CompInterval(Interval a, Interval b);
+static bool CompInterval(Interval& a, Interval& b);
 
 vector<Interval> merge(vector<Interval>& intervals) {
     vector<Interval> res;
@@ -29,6 +29,6 @@ vector<Interval> merge(vector<Interval>& intervals) {
     return res;
 }
 
-static bool CompInterval(Interval a, Interval b) {
+static bool CompInterval(Interval& a, Interval& b) {
     return (a.start<b.start);
 }

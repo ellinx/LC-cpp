@@ -3,7 +3,7 @@
 #define Solutions_hpp
 
 #include <iostream>
-#include <utility>
+#include <utility> //std::pair, std::make_pair
 #include <locale>
 #include <algorithm>
 #include <cmath>
@@ -20,9 +20,10 @@
 
 using namespace std;
 
-#define INPUT_MANUAL (0)
-#define INPUT_VEC_INT (1)
-#define INPUT_VEC_STR (2)
+#define INPUT_MANUAL        (0)
+#define INPUT_VEC_INT       (1)
+#define INPUT_VEC_STR       (2)
+#define INPUT_VEC_INTERVALS (3)
 
 struct TreeNode {
     int val;
@@ -35,7 +36,7 @@ struct ListNode {
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
- };
+};
 
 struct Interval {
     int start;
@@ -104,6 +105,12 @@ public:
     ListNode* mergeKLists(vector<ListNode*>& lists);
     bool isOneEditDistance(string s, string t);
     string longestPalindrome(string s);
+    bool canAttendMeetings(vector<Interval>& intervals);
+    int minMeetingRooms(vector<Interval>& intervals);
+    void sortColors(vector<int>& nums);
+    bool isValid(string s);
+    vector<vector<int>> subsets(vector<int>& nums);
+    vector<vector<int>> subsetsWithDup(vector<int>& nums);
 };
 
 
