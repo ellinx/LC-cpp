@@ -31,7 +31,7 @@ Binary tree [1,2,3], return false.
 bool DFS(TreeNode* root, TreeNode* &pre);
 
 bool Solutions::isValidBST(TreeNode* root) {
-	TreeNode* pre = NULL;
+	TreeNode* pre = NULL; //store previous value there is problem(like the very first node value is INT_MIN).
 	return DFS(root, pre);
 }
 
