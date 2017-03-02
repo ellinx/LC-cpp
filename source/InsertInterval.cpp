@@ -23,37 +23,23 @@ vector<Interval> Solutions::insert(vector<Interval>& intervals, Interval newInte
         res.push_back(newInterval);
         return res;
     }
-    for (int i=0;i<intervals.size();i++) {
-        if (newInterval.start>intervals[i].end) {
-            res.push_back(intervals[i]);
-        } else {
-            if (newInterval.start>=intervals[i].start) {
-                newInterval.start = intervals[i].start;
-            }
-            while (newInterval.end>intervals[i].end) {
-                i++;
-                if (i==intervals.size()) {
-                    res.push_back(newInterval);
-                    return res;
-                }
-            }
-            if (newInterval.end<intervals[i].start) {
-                res.push_back(newInterval);
-                while (i<intervals.size()) {
-                    res.push_back(intervals[i++]);
-                }
-                return res;
-            } else {
-                newInterval.end = intervals[i].end;
-                res.push_back(newInterval);
-                i++;
-                while (i<intervals.size()) {
-                    res.push_back(intervals[i++]);
-                }
-                return res;
-            }
-        }
+    
+    int index = 0;
+    //add non-overlap
+    while (index<intervals.size() && intervals[index].end < newInterval.start) {
+        res.push_back(intervals[index]);
+        index++;
+    }
+    //merge overlap
+    while (index<intervals.size() && intervals[index].start <= newInterval.end) {
+        newInterval.start = min(intervals[index].start,newInterval.start);
+        newInterval.end = max(intervals[index].end,newInterval.end);
+        index++;
     }
     res.push_back(newInterval);
+    //add rest non-overlap
+    while (index<intervals.size()) {
+        res.push_back(intervals[index++]);
+    }
     return res;
 }
