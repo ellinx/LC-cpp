@@ -11,13 +11,19 @@ using namespace std;
 */
 
 int Solutions::maxProduct(vector<int>& nums) {
+    if (nums.empty()) return 0;
+    
+    int maxHere = 0;
+    int minHere = 0;
+    int maxPre = 1;
+    int minPre = 1;
     int res=INT_MIN;
-    for (int start=0;start<nums.size();start++) {
-        int product = 1;
-        for (int i=start;i<nums.size();i++) {
-            product *= nums[i];
-            if (product>res) res = product;
-        }
+    for (int i=0;i<nums.size();i++) {
+        maxHere = max(max(maxPre*nums[i],minPre*nums[i]),nums[i]);
+        minHere = min(min(maxPre*nums[i],minPre*nums[i]),nums[i]);
+        res = max(res,maxHere);
+        maxPre = maxHere;
+        minPre = minHere;
     }
     return res;
 }

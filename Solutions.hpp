@@ -113,6 +113,7 @@ public:
     vector<vector<int>> subsetsWithDup(vector<int>& nums);
     int findKthLargest(vector<int>& nums, int k);
     TreeNode* ConstructFromInorder(vector<int>& inorder);
+    int maxSubArrayLen(vector<int>& nums, int k);
 };
 
 

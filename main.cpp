@@ -14,18 +14,18 @@ int main() {
     vector<string> vec_string;
     vector<Interval> vec_interval;
 
-    int nums[] = {1,1,5};
+    int nums[] = {1, -1, 5, -2, 3};
     
     string words[] = {"leet","code","cog"};
     
     Interval intervals[] = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
     
-    int input_type = INPUT_VEC_INTERVALS;
+    int input_type = INPUT_VEC_INT;
     
     switch(input_type) {
         case INPUT_VEC_INT:
             cout<<"Input:";
-            vec_int = InitVectorInt(nums, 3);
+            vec_int = InitVectorInt(nums, 5);
             break;
         case INPUT_VEC_STR:
             cout<<"Input:";
@@ -40,7 +40,7 @@ int main() {
     }
     
 
-    int result = dummy.minMeetingRooms(vec_interval);
+    int result = dummy.maxSubArrayLen(vec_int,3);
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;
