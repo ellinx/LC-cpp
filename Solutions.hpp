@@ -114,6 +114,8 @@ public:
     int findKthLargest(vector<int>& nums, int k);
     TreeNode* ConstructFromInorder(vector<int>& inorder);
     int maxSubArrayLen(vector<int>& nums, int k);
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target);
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target);
 };
 
 
