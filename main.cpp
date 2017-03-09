@@ -20,7 +20,7 @@ int main() {
     
     Interval intervals[] = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
     
-    int input_type = INPUT_VEC_INT;
+    int input_type = INPUT_MANUAL;
     
     switch(input_type) {
         case INPUT_VEC_INT:
@@ -40,7 +40,7 @@ int main() {
     }
     
 
-    int result = dummy.maxSubArrayLen(vec_int,3);
+    bool result = dummy.isMatch("aa", "*");
 	cout<<"result is:"<<endl;
     //printVector(result);
 	cout<<result<<endl;
