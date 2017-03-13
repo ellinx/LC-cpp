@@ -22,6 +22,32 @@ using namespace std;
 void helper(int cur, string& buildBlk, string& digits, vector<string>& res);
 string getStr(char a);
 
+//iterative
+vector<string> Solutions::letterCombinations(string digits) {
+    vector<string> res;
+    if (digits.empty()) return res;
+    
+    
+    string tmp = getStr(digits[0]);
+    for (int j=0;j<tmp.size();j++) {
+        res.push_back(string(1,tmp[j]));
+    }
+    int index=1;
+    while (index < digits.size()) {
+        vector<string> newRes;
+        for (int i=0;i<res.size();i++) {
+            tmp = getStr(digits[index]);
+            for (int j=0;j<tmp.size();j++) {
+                newRes.push_back(res[i]+tmp[j]);
+            }
+        }
+        res = newRes;
+        index++;
+    }
+    return res;
+}
+
+#if 0  //recursive
 vector<string> Solutions::letterCombinations(string digits) {
     vector<string> res;
     if (digits.empty()) return res;
@@ -29,6 +55,7 @@ vector<string> Solutions::letterCombinations(string digits) {
     helper(0,buildBlk,digits,res);
     return res;
 }
+#endif
 
 void helper(int cur, string& buildBlk, string& digits, vector<string>& res) {
     if (cur==digits.size()) {
