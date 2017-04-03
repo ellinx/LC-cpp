@@ -17,6 +17,7 @@
 #include <unordered_map>
 #include <queue>
 #include <list>
+#include <functional>   // std::function, std::negate
 
 using namespace std;
 
@@ -24,6 +25,7 @@ using namespace std;
 #define INPUT_VEC_INT       (1)
 #define INPUT_VEC_STR       (2)
 #define INPUT_VEC_INTERVALS (3)
+#define INPUT_LIST_INT		(4)
 
 struct TreeNode {
     int val;
@@ -117,6 +119,9 @@ public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target);
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target);
     bool isMatch(string s, string p);
+	vector<int> twoSum(vector<int>& nums, int target);
+	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
+	ListNode* addTwoNumbersII(ListNode* l1, ListNode* l2);
 };
 
 
