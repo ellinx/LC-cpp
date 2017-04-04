@@ -26,6 +26,9 @@ using namespace std;
 #define INPUT_VEC_STR       (2)
 #define INPUT_VEC_INTERVALS (3)
 #define INPUT_LIST_INT		(4)
+#define INPUT_MATRIX_INT	(5)
+
+#define MATRIX_N			(3)
 
 struct TreeNode {
     int val;
@@ -122,6 +125,11 @@ public:
 	vector<int> twoSum(vector<int>& nums, int target);
 	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
 	ListNode* addTwoNumbersII(ListNode* l1, ListNode* l2);
+	int lengthOfLongestSubstring(string s);
+	int trap(vector<int>& height);
+	void rotate(vector<vector<int>>& matrix);
+	vector<vector<string>> groupAnagrams(vector<string>& strs);
+	vector<int> grayCode(int n);
 };
 
 

@@ -20,13 +20,51 @@ using namespace std;
  Output: "bb"
 */
 
+int extend(string s, int left, int right);
+
+string Solutions::longestPalindrome(string s) {
+	if (s.empty()) return "";
+	if (s.size()==1) return s;
+	string res;
+	for (int i=0;i<s.size();i++) {
+		//odd length 
+		int length = extend(s,i,i);
+		if (length > res.size()) {
+			int tmp = (length-1)>>1;
+			res = s.substr(i-tmp,length);
+		}
+		//even length
+		if (i<s.size()-1 && s[i]==s[i+1]) {
+			length = extend(s,i,i+1);
+			if (length > res.size()) {
+				int tmp = length>>1;
+				res = s.substr(i-tmp+1,length);
+			}
+		}
+	}
+	return res;
+}
+
+int extend(string s, int left, int right) { 
+	while (s[left]==s[right]) {
+		left--;
+		right++;
+		if (left<0 || right>=s.size()) break;
+	}
+	return ((right-1)-(left+1)+1);
+}
+
+#if 0
 string Solutions::longestPalindrome(string s) {
     if (s.empty()) return "";
     
+	//dp[i][j] is 1 if substring s.substr(i,j-i+1) is palindromic
+	//otherwise is 0
     vector<int> row(s.size(),0);
     vector<vector<int>> dp(s.size(),row);
     string res(1,s[0]);
     
+	//check if s.substr(i,diff+1) is palindromic
     for (int diff=0;diff<s.size();diff++) {
         for (int i=0;i<s.size()-diff;i++) {
             if (diff==0) {
@@ -50,3 +88,4 @@ string Solutions::longestPalindrome(string s) {
     }
     return res;
 }
+#endif
