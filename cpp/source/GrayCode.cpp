@@ -23,7 +23,7 @@ For example, [0,2,3,1] is also a valid gray code sequence according to the above
 */
 
 vector<int> Solutions::grayCode(int n) {
-	if (n==0) return vector<int>(1,0);
+    if (n==0) return {0};
 	vector<int> pre;
 	vector<int> cur(2,0);
 	cur[1] = 1;
