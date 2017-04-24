@@ -24,16 +24,19 @@ public class FindAllNumbersDisappearedInArray {
         Set<Integer> set = new HashSet<Integer>();
         List<Integer> res = new ArrayList<Integer>();
         
+        // put 1-n into a set
         for (int i=0;i<nums.length;i++) {
         	set.add(i+1);
         }
         
+        //remove number in nums from set
         for (int i=0;i<nums.length;i++) {
         	if (set.contains(nums[i])) {
         		set.remove(nums[i]);
         	}
         }
         
+        //put integers which is not in nums to result
         for (Integer i : set) {
         	res.add(i);
         }
