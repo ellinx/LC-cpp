@@ -23,7 +23,7 @@ int main() {
 	ListNode* list_int = NULL;
 	ListNode* list_int2 = NULL;
 
-    int nums[] = {0,1,0,2,1,0,1,3,2,1,2,1};
+    int nums[] = {2, 4, 1, 2, 0, 1};
 	int nums2[] = {5, 6, 4};
     
     string words[] = {"leet","code","cog"};
@@ -36,7 +36,7 @@ int main() {
     
     Interval intervals[] = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
     
-    int input_type = INPUT_MANUAL;
+    int input_type = INPUT_VEC_INT;
     
     switch(input_type) {
         case INPUT_VEC_INT:
@@ -65,13 +65,13 @@ int main() {
     }
     
 
-	vector<int> result = dummy.grayCode(3);
+	bool result = dummy.canFindZero(vec_int, 2);
 	cout<<"result is:"<<endl;
 	
 	
 	//printMatrix(matrix_int);
-    printVector(result);
-	//cout<<result<<endl;
+    //printVector(result);
+	cout<<result<<endl;
 	//printList(result);
     return 0;
 }

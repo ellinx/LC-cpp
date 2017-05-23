@@ -130,6 +130,7 @@ public:
 	void rotate(vector<vector<int>>& matrix);
 	vector<vector<string>> groupAnagrams(vector<string>& strs);
 	vector<int> grayCode(int n);
+    bool canFindZero(vector<int>& nums, int index);
 };
 
 
