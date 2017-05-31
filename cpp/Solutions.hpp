@@ -27,8 +27,12 @@ using namespace std;
 #define INPUT_VEC_INTERVALS (3)
 #define INPUT_LIST_INT		(4)
 #define INPUT_MATRIX_INT	(5)
+#define INPUT_MATRIX_CHAR	(6)
 
-#define MATRIX_N			(3)
+#define MATRIX_INT_ROW		(3)
+#define MATRIX_INT_COL		(3)
+#define MATRIX_CHAR_ROW		(3)
+#define MATRIX_CHAR_COL		(4)
 
 struct TreeNode {
     int val;
@@ -131,6 +135,7 @@ public:
 	vector<vector<string>> groupAnagrams(vector<string>& strs);
 	vector<int> grayCode(int n);
     bool canFindZero(vector<int>& nums, int index);
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2);
 };
 
 
