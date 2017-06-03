@@ -5,6 +5,7 @@ using namespace std;
 void printVector(vector<int>& vec);
 void printVector(vector<char>& vec);
 void printVector(vector<string>& vec);
+void printVector(vector<Interval>& vec);
 void printList(ListNode* head);
 void printMatrix(vector<vector<int>>& matrix_int);
 void printMatrix(vector<vector<char>>& matrix_int);
@@ -29,7 +30,7 @@ int main() {
     int nums[] = {2, 4, 1, 2, 0, 1};
 	int nums2[] = {5, 6, 4};
     
-    string words[] = {"leet","code","cog"};
+    string words[] = {"oath","pea","eat","rain"};
 
 	int matrixInt[][MATRIX_INT_COL] = {
 		{1, 2, 3},
@@ -38,53 +39,66 @@ int main() {
 	};
     
     char matrixChar[][MATRIX_CHAR_COL] = {
-        {'A', 'B', 'C', 'E'},
-        {'S', 'F', 'C', 'S'},
-        {'A', 'D', 'E', 'E'}
+        {'o', 'a', 'a', 'n'},
+        {'e', 't', 'a', 'e'},
+        {'i', 'h', 'k', 'r'},
+        {'i', 'f', 'l', 'v'}
     };
     
     Interval intervals[] = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
     
+    //****** initialize inputs *****************************************************************
+    vec_int = InitVectorInt(nums, sizeof(nums)/sizeof(nums[0]));
+    vec_string = InitVectorString(words, sizeof(words)/sizeof(words[0]));
+    vec_interval = InitVectorInterval(intervals, sizeof(intervals)/sizeof(intervals[0]));
+    list_int = InitListInt(nums, sizeof(nums)/sizeof(nums[0]));
+    list_int2 = InitListInt(nums2, sizeof(nums2)/sizeof(nums2[0]));
+    matrix_int = InitMatrixInt(matrixInt, MATRIX_INT_ROW, MATRIX_INT_COL);
+    matrix_char = InitMatrixChar(matrixChar, MATRIX_CHAR_ROW, MATRIX_CHAR_COL);
+    //******************************************************************************************
+    
+    //******************* print out inputs ******************************************************
     int input_type = INPUT_MATRIX_CHAR;
     
     switch(input_type) {
         case INPUT_VEC_INT:
             cout<<"Input: ";
-            vec_int = InitVectorInt(nums, sizeof(nums)/sizeof(nums[0]));
+            printVector(vec_int);
             break;
         case INPUT_VEC_STR:
             cout<<"Input: ";
-            vec_string = InitVectorString(words, sizeof(words)/sizeof(words[0]));
+            printVector(vec_string);
             break;
         case INPUT_VEC_INTERVALS:
             cout<<"Input: ";
-            vec_interval = InitVectorInterval(intervals, sizeof(intervals)/sizeof(intervals[0]));
+            printVector(vec_interval);
             break;
 		case INPUT_LIST_INT:
 			cout<<"Input:"<<endl;
-            list_int = InitListInt(nums, sizeof(nums)/sizeof(nums[0]));
-			list_int2 = InitListInt(nums2, sizeof(nums2)/sizeof(nums2[0]));
+            printList(list_int);
+            printList(list_int2);
 			break;
 		case INPUT_MATRIX_INT:
 			cout<<"Input:"<<endl;
-			matrix_int = InitMatrixInt(matrixInt, MATRIX_INT_ROW, MATRIX_INT_COL);
+            printMatrix(matrix_int);
 			break;
         case INPUT_MATRIX_CHAR:
             cout<<"Input:"<<endl;
-            matrix_char = InitMatrixChar(matrixChar, MATRIX_CHAR_ROW, MATRIX_CHAR_COL);
+            printMatrix(matrix_char);
             break;
         default:
             break;
     }
-    
+    //******************************************************************************************
 
-	bool result = dummy.exist(matrix_char, "ABCB");
+    //test code
+	vector<string> result = dummy.findWords(matrix_char, vec_string);
 	cout<<"result is:"<<endl;
 	
 	
 	//printMatrix(matrix_int);
-    //printVector(result);
-	cout<<result<<endl;
+    printVector(result);
+	//cout<<result<<endl;
 	//printList(result);
     return 0;
 }
@@ -96,7 +110,7 @@ vector<int> InitVectorInt(int array[], int n) {
     for (int i=0;i<n;i++) {
         res.push_back(array[i]);
     }
-    printVector(res);
+
     return res;
 }
 
@@ -105,7 +119,7 @@ vector<string> InitVectorString(string array[], int n) {
     for (int i=0;i<n;i++) {
         res.push_back(array[i]);
     }
-    printVector(res);
+
     return res;
 }
 
@@ -114,6 +128,7 @@ vector<Interval> InitVectorInterval(Interval array[], int n) {
     for (int i=0;i<n;i++) {
         res.push_back(array[i]);
     }
+    
     return res;
 }
 
@@ -126,7 +141,7 @@ ListNode* InitListInt(int array[], int n) {
 		cur->next = new ListNode(array[i]);
 		cur = cur->next;
 	}
-	printList(head);
+
 	return head;
 }
 
@@ -139,7 +154,7 @@ vector<vector<int>> InitMatrixInt(int array[][MATRIX_INT_COL], int totalRow, int
 			res[i][j] = array[i][j];
 		}
 	}
-	printMatrix(res);
+
 	return res;
 }
 
@@ -152,7 +167,7 @@ vector<vector<char>> InitMatrixChar(char array[][MATRIX_CHAR_COL],int totalRow, 
             res[i][j] = array[i][j];
         }
     }
-    printMatrix(res);
+
     return res;
 }
 
@@ -186,6 +201,10 @@ void printVector(vector<string>& vec) {
         }
     }
     cout<<"]"<<endl;
+}
+
+void printVector(vector<Interval> & vec) {
+    
 }
 
 void printList(ListNode* head) {
