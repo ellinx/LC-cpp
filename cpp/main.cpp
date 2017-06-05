@@ -33,9 +33,10 @@ int main() {
     string words[] = {"oath","pea","eat","rain"};
 
 	int matrixInt[][MATRIX_INT_COL] = {
-		{1, 2, 3},
-		{4, 5, 6},
-		{7, 8, 9}
+		{1, 0, 0, 1},
+		{0, 1, 1, 0},
+		{0, 1, 1, 1},
+        {1, 0, 1, 1}
 	};
     
     char matrixChar[][MATRIX_CHAR_COL] = {
@@ -58,7 +59,7 @@ int main() {
     //******************************************************************************************
     
     //******************* print out inputs ******************************************************
-    int input_type = INPUT_MATRIX_CHAR;
+    int input_type = INPUT_MATRIX_INT;
     
     switch(input_type) {
         case INPUT_VEC_INT:
@@ -92,13 +93,13 @@ int main() {
     //******************************************************************************************
 
     //test code
-	vector<string> result = dummy.findWords(matrix_char, vec_string);
+	int result = dummy.findCircleNum(matrix_int);
 	cout<<"result is:"<<endl;
 	
 	
 	//printMatrix(matrix_int);
-    printVector(result);
-	//cout<<result<<endl;
+    //printVector(result);
+	cout<<result<<endl;
 	//printList(result);
     return 0;
 }

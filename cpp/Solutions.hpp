@@ -29,8 +29,8 @@ using namespace std;
 #define INPUT_MATRIX_INT	(5)
 #define INPUT_MATRIX_CHAR	(6)
 
-#define MATRIX_INT_ROW		(3)
-#define MATRIX_INT_COL		(3)
+#define MATRIX_INT_ROW		(4)
+#define MATRIX_INT_COL		(4)
 #define MATRIX_CHAR_ROW		(4)
 #define MATRIX_CHAR_COL		(4)
 
@@ -137,6 +137,7 @@ public:
     bool canFindZero(vector<int>& nums, int index);
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2);
     vector<string> findWords(vector<vector<char>>& board, vector<string>& words);
+    int findCircleNum(vector<vector<int>>& M);
 };
 
 
