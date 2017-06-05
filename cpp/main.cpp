@@ -40,10 +40,13 @@ int main() {
 	};
     
     char matrixChar[][MATRIX_CHAR_COL] = {
-        {'o', 'a', 'a', 'n'},
+        /*{'o', 'a', 'a', 'n'},
         {'e', 't', 'a', 'e'},
         {'i', 'h', 'k', 'r'},
-        {'i', 'f', 'l', 'v'}
+        {'i', 'f', 'l', 'v'}*/
+        {'A','B','C','E'},
+        {'S','F','C','S'},
+        {'A','D','E','E'}
     };
     
     Interval intervals[] = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
@@ -59,7 +62,7 @@ int main() {
     //******************************************************************************************
     
     //******************* print out inputs ******************************************************
-    int input_type = INPUT_MATRIX_INT;
+    int input_type = INPUT_MATRIX_CHAR;
     
     switch(input_type) {
         case INPUT_VEC_INT:
@@ -93,7 +96,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.findCircleNum(matrix_int);
+	int result = dummy.exist(matrix_char,"ABCB");
 	cout<<"result is:"<<endl;
 	
 	

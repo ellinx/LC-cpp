@@ -31,7 +31,7 @@ using namespace std;
 
 #define MATRIX_INT_ROW		(4)
 #define MATRIX_INT_COL		(4)
-#define MATRIX_CHAR_ROW		(4)
+#define MATRIX_CHAR_ROW		(3)
 #define MATRIX_CHAR_COL		(4)
 
 struct TreeNode {
