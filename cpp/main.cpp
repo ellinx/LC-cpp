@@ -96,7 +96,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.exist(matrix_char,"ABCB");
+	int result = dummy.findCircleNum(matrix_int);
 	cout<<"result is:"<<endl;
 	
 	

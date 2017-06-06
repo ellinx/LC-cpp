@@ -11,16 +11,16 @@ using namespace std;
  Example 1:
  Input:
  [[1,1,0],
- [1,1,0],
- [0,0,1]]
+  [1,1,0],
+  [0,0,1]]
  Output: 2
  Explanation:The 0th and 1st students are direct friends, so they are in a friend circle.
  The 2nd student himself is in a friend circle. So return 2.
  Example 2:
  Input:
  [[1,1,0],
- [1,1,1],
- [0,1,1]]
+  [1,1,1],
+  [0,1,1]]
  Output: 1
  Explanation:The 0th and 1st students are direct friends, the 1st and 2nd students are direct friends,
  so the 0th and 2nd students are indirect friends. All of them are in the same friend circle, so return 1.
@@ -42,12 +42,15 @@ int Solutions::findCircleNum(vector<vector<int>>& M) {
     }
     
     for (int i=0;i<n;i++) {
+        //assume student i have no friend
         bool isAlone = true;
         for (int j=0;j<n;j++) {
             if (i==j) continue;
             if (M[i][j]==1) {
-                isAlone = false;
-                MSet.erase(i);
+                if (isAlone) {
+                    isAlone = false;
+                    MSet.erase(i);
+                }
                 DFS(M, i, j, MSet);
             }
         }
@@ -58,6 +61,7 @@ int Solutions::findCircleNum(vector<vector<int>>& M) {
             return res;
         }
     }
+    //these students don't have friends
     if (!MSet.empty()) {
         res += MSet.size();
     }
@@ -68,6 +72,7 @@ void DFS(vector<vector<int>>& M, int row, int col, unordered_set<int>& MSet) {
     int n = M.size();
     
     M[row][col] = 0;
+    M[col][row] = 0;
     MSet.erase(col);
     if (MSet.empty()) return;
     for (int i=0;i<n;i++) {
