@@ -72,7 +72,7 @@ public:
     vector<vector<int>> permute(vector<int>& nums);
     vector<string> generateParenthesis(int n);
     TreeNode* invertTree(TreeNode* root);
-    vector<int> singleNumber(vector<int>& nums);
+    vector<int> singleNumberIII(vector<int>& nums);
     bool isSameTree(TreeNode* p, TreeNode* q);
     vector<int> topKFrequent(vector<int>& nums, int k);
     int maxProfit(vector<int>& prices);
@@ -138,6 +138,8 @@ public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2);
     vector<string> findWords(vector<vector<char>>& board, vector<string>& words);
     int findCircleNum(vector<vector<int>>& M);
+    int singleNumberII(vector<int>& nums);
+    long long coinChange(vector<int>& coins, int money);
 };
 
 
