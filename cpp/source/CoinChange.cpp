@@ -29,6 +29,7 @@ Given a number of dollars, n, and a list of dollar values for m distinct coins, 
  If you are having trouble defining the storage for your precomputed values, then think about it in terms of the base case(n=0).
  */
 
+//combination if coin order does not matter
 long long Solutions::coinChange(vector<int>& coins, int money) {
     vector<long> answer(money+1,0);
     answer[0] = 1;
@@ -39,3 +40,18 @@ long long Solutions::coinChange(vector<int>& coins, int money) {
     }
     return answer[money];
 }
+
+//permutation if coin order does matter
+long long coinChangeP(vector<int>& coins, int money) {
+    vector<long> res(money+1);
+    res[0] = 1;
+    for (int i=0;i<money;i++) {
+        for (int coin : coins) {
+            if (i >= coin) {
+                res[i] += res[i-coin];
+            }
+        }
+    }
+    return res.back();
+}
+
