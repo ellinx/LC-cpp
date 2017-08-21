@@ -6,6 +6,7 @@
 #include <utility> //std::pair, std::make_pair
 #include <locale>
 #include <algorithm>
+#include <numeric> //iota
 #include <cmath>
 #include <vector>
 #include <string>
@@ -17,7 +18,7 @@
 #include <unordered_map>
 #include <queue>
 #include <list>
-#include <functional>   // std::function, std::negate
+#include <functional>   // std::function, std::negate std::greater
 
 using namespace std;
 
@@ -140,6 +141,8 @@ public:
     int findCircleNum(vector<vector<int>>& M);
     int singleNumberII(vector<int>& nums);
     long long coinChange(vector<int>& coins, int money);
+    int minDistance(string word1, string word2);
+    vector<string> findItinerary(vector<pair<string, string>> tickets);
 };
 
 
