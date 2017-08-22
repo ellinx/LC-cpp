@@ -1,14 +1,7 @@
 #include "Solutions.hpp"
+#include "main.h"
 
 using namespace std;
-
-void printVector(vector<int>& vec);
-void printVector(vector<char>& vec);
-void printVector(vector<string>& vec);
-void printVector(vector<Interval>& vec);
-void printList(ListNode* head);
-void printMatrix(vector<vector<int>>& matrix_int);
-void printMatrix(vector<vector<char>>& matrix_int);
 
 vector<int> InitVectorInt(int array[], int n);
 vector<string> InitVectorString(string array[], int n);
@@ -33,10 +26,9 @@ int main() {
     string words[] = {"oath","pea","eat","rain"};
 
 	int matrixInt[][MATRIX_INT_COL] = {
-		{1, 0, 0, 1},
-		{0, 1, 1, 0},
-		{0, 1, 1, 1},
-        {1, 0, 1, 1}
+		{3, 4, 5},
+		{3, 2, 6},
+		{2, 2, 1}
 	};
     
     char matrixChar[][MATRIX_CHAR_COL] = {
@@ -62,7 +54,7 @@ int main() {
     //******************************************************************************************
     
     //******************* print out inputs ******************************************************
-    int input_type = INPUT_MATRIX_CHAR;
+    int input_type = INPUT_MATRIX_INT;
     
     switch(input_type) {
         case INPUT_VEC_INT:
@@ -96,7 +88,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	bool result = dummy.isValidSerialization("932,3,4,#,#,1,#,#,2,#,6,#,#");
+	int result = dummy.longestIncreasingPath(matrix_int);
 	cout<<"result is:"<<endl;
 	
 	

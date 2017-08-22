@@ -30,8 +30,8 @@ using namespace std;
 #define INPUT_MATRIX_INT	(5)
 #define INPUT_MATRIX_CHAR	(6)
 
-#define MATRIX_INT_ROW		(4)
-#define MATRIX_INT_COL		(4)
+#define MATRIX_INT_ROW		(3)
+#define MATRIX_INT_COL		(3)
 #define MATRIX_CHAR_ROW		(3)
 #define MATRIX_CHAR_COL		(4)
 
@@ -144,6 +144,7 @@ public:
     int minDistance(string word1, string word2);
     vector<string> findItinerary(vector<pair<string, string>> tickets);
     bool isValidSerialization(string preorder);
+    int longestIncreasingPath(vector<vector<int>>& matrix);
 };
 
 
