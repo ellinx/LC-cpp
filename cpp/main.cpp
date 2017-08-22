@@ -96,7 +96,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.findCircleNum(matrix_int);
+	bool result = dummy.isValidSerialization("932,3,4,#,#,1,#,#,2,#,6,#,#");
 	cout<<"result is:"<<endl;
 	
 	

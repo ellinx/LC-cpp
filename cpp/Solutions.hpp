@@ -143,6 +143,7 @@ public:
     long long coinChange(vector<int>& coins, int money);
     int minDistance(string word1, string word2);
     vector<string> findItinerary(vector<pair<string, string>> tickets);
+    bool isValidSerialization(string preorder);
 };
 
 
