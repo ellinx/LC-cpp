@@ -9,11 +9,14 @@ using namespace std;
 
  "((()))", "(()())", "(())()", "()(())", "()()()"
 */
+
+vector<string> generateParenthesisHelper(int left, int right);
+
 vector<string> Solutions::generateParenthesis(int n) {
     return generateParenthesisHelper(n,n);
 }
 
-vector<string> Solutions::generateParenthesisHelper(int left, int right){
+vector<string> generateParenthesisHelper(int left, int right){
     vector<string> res;
     if (left > 0) {
         vector<string> pre_result = generateParenthesisHelper(left-1, right);

@@ -62,8 +62,6 @@ struct UndirectedGraphNode {
 };
 
 class Solutions{
-private:
-    vector<string> generateParenthesisHelper(int left, int right);
 public:
     vector<int> countBits(int num);
     int maxDepth(TreeNode* root);
@@ -145,6 +143,7 @@ public:
     vector<string> findItinerary(vector<pair<string, string>> tickets);
     bool isValidSerialization(string preorder);
     int longestIncreasingPath(vector<vector<int>>& matrix);
+    bool isPowerOfThree(int n);
 };
 
 
