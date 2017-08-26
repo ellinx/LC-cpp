@@ -20,7 +20,7 @@ int main() {
 	ListNode* list_int = NULL;
 	ListNode* list_int2 = NULL;
 
-    int nums[] = {2, 4, 1, 2, 0, 1};
+    int nums[] = {1, 5, 1, 1, 6, 4};
 	int nums2[] = {5, 6, 4};
     
     string words[] = {"oath","pea","eat","rain"};
@@ -54,7 +54,7 @@ int main() {
     //******************************************************************************************
     
     //******************* print out inputs ******************************************************
-    int input_type = INPUT_MATRIX_INT;
+    int input_type = INPUT_VEC_INT;
     
     switch(input_type) {
         case INPUT_VEC_INT:
@@ -88,13 +88,14 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.longestIncreasingPath(matrix_int);
+	//int result =
+    dummy.wiggleSortII(vec_int);
 	cout<<"result is:"<<endl;
 	
 	
 	//printMatrix(matrix_int);
-    //printVector(result);
-	cout<<result<<endl;
+    printVector(vec_int);
+	//cout<<result<<endl;
 	//printList(result);
     return 0;
 }

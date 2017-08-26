@@ -144,6 +144,9 @@ public:
     bool isValidSerialization(string preorder);
     int longestIncreasingPath(vector<vector<int>>& matrix);
     bool isPowerOfThree(int n);
+    void wiggleSortII(vector<int>& nums);
+    int countComponents(int n, vector<pair<int,int>>& edges);
+    int maxProductWordLength(vector<string>& words);
 };
 
 
