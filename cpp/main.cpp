@@ -20,7 +20,7 @@ int main() {
 	ListNode* list_int = NULL;
 	ListNode* list_int2 = NULL;
 
-    int nums[] = {1, 5, 1, 1, 6, 4};
+    int nums[] = {2, 7, 13, 19};
 	int nums2[] = {5, 6, 4};
     
     string words[] = {"oath","pea","eat","rain"};
@@ -53,7 +53,7 @@ int main() {
     matrix_char = InitMatrixChar(matrixChar, MATRIX_CHAR_ROW, MATRIX_CHAR_COL);
     //******************************************************************************************
     
-    //******************* print out inputs ******************************************************
+    //******************* print inputs ******************************************************
     int input_type = INPUT_VEC_INT;
     
     switch(input_type) {
@@ -85,17 +85,17 @@ int main() {
         default:
             break;
     }
+    cout<<endl;
     //******************************************************************************************
 
     //test code
-	//int result =
-    dummy.wiggleSortII(vec_int);
+	int result = dummy.nthSuperUglyNumber(12,vec_int);
 	cout<<"result is:"<<endl;
 	
 	
 	//printMatrix(matrix_int);
-    printVector(vec_int);
-	//cout<<result<<endl;
+    //printVector(result);
+	cout<<result<<endl;
 	//printList(result);
     return 0;
 }

@@ -147,6 +147,11 @@ public:
     void wiggleSortII(vector<int>& nums);
     int countComponents(int n, vector<pair<int,int>>& edges);
     int maxProductWordLength(vector<string>& words);
+    vector<vector<int>> verticalOrder(TreeNode* root);
+    vector<string> generateAbbreviations(string word);
+    bool isUgly(int num);
+    int nthUglyNumber(int n);
+    int nthSuperUglyNumber(int n, vector<int>& primes);
 };
 
 
