@@ -152,6 +152,8 @@ public:
     bool isUgly(int num);
     int nthUglyNumber(int n);
     int nthSuperUglyNumber(int n, vector<int>& primes);
+    TreeNode* deleteNode(TreeNode* root, int key);
+    void gameOfLife(vector<vector<int>>& board);
 };
 
 
