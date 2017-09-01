@@ -154,6 +154,7 @@ public:
     int nthSuperUglyNumber(int n, vector<int>& primes);
     TreeNode* deleteNode(TreeNode* root, int key);
     void gameOfLife(vector<vector<int>>& board);
+    int maxProfitWithCD(vector<int>& prices);
 };
 
 

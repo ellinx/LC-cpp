@@ -20,7 +20,7 @@ int main() {
 	ListNode* list_int = NULL;
 	ListNode* list_int2 = NULL;
 
-    int nums[] = {2, 7, 13, 19};
+    int nums[] = {1, 2, 3, 0, 2};
 	int nums2[] = {5, 6, 4};
     
     string words[] = {"oath","pea","eat","rain"};
@@ -89,7 +89,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.nthSuperUglyNumber(12,vec_int);
+	int result = dummy.maxProfitWithCD(vec_int);
 	cout<<"result is:"<<endl;
 	
 	
