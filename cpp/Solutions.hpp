@@ -158,6 +158,8 @@ public:
     vector<int> LCS(vector<int> a, vector<int> b);
     int longestPalindromeSubseq(string s);
     int findLUSlength(string a, string b);
+    int findLHS(vector<int>& nums);
+    bool isSubsequence(string s, string t);
 };
 
 

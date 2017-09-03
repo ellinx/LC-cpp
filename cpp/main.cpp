@@ -20,7 +20,7 @@ int main() {
 	ListNode* list_int = NULL;
 	ListNode* list_int2 = NULL;
 
-    int nums[] = {1, 2, 3, 0, 2};
+    int nums[] = {1,3,2,2,5,2,3,7};
 	int nums2[] = {5, 6, 4};
     
     string words[] = {"oath","pea","eat","rain"};
@@ -89,7 +89,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.findLUSlength("aaa","aaa");
+	bool result = dummy.isSubsequence("axc", "ahbgdc");
 	cout<<"result is:"<<endl;
 	
 	
