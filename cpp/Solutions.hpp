@@ -155,6 +155,7 @@ public:
     TreeNode* deleteNode(TreeNode* root, int key);
     void gameOfLife(vector<vector<int>>& board);
     int maxProfitWithCD(vector<int>& prices);
+    vector<int> LCS(vector<int> a, vector<int> b);
 };
 
 
