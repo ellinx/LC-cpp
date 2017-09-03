@@ -156,6 +156,8 @@ public:
     void gameOfLife(vector<vector<int>>& board);
     int maxProfitWithCD(vector<int>& prices);
     vector<int> LCS(vector<int> a, vector<int> b);
+    int longestPalindromeSubseq(string s);
+    int findLUSlength(string a, string b);
 };
 
 

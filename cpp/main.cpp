@@ -89,7 +89,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.maxProfitWithCD(vec_int);
+	int result = dummy.findLUSlength("aaa","aaa");
 	cout<<"result is:"<<endl;
 	
 	
