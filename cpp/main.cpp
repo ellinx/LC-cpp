@@ -20,7 +20,7 @@ int main() {
 	ListNode* list_int = NULL;
 	ListNode* list_int2 = NULL;
 
-    int nums[] = {1,3,2,2,5,2,3,7};
+    int nums[] = {3,1,4,2};
 	int nums2[] = {5, 6, 4};
     
     string words[] = {"oath","pea","eat","rain"};
@@ -89,7 +89,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	bool result = dummy.isSubsequence("axc", "ahbgdc");
+	bool result = dummy.find132pattern(vec_int);
 	cout<<"result is:"<<endl;
 	
 	
@@ -225,4 +225,16 @@ void printMatrix(vector<vector<char>>& matrix) {
     for (int i=0;i<matrix.size();i++) {
         printVector(matrix[i]);
     }
+}
+
+void printStack(stack<int> stk) {
+    cout<<"[";
+    while (!stk.empty()) {
+        cout<<stk.top();
+        stk.pop();
+        if (!stk.empty()) {
+            cout<<",";
+        }
+    }
+    cout<<"]"<<endl;
 }

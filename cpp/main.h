@@ -16,5 +16,6 @@ void printVector(vector<Interval>& vec);
 void printList(ListNode* head);
 void printMatrix(vector<vector<int>>& matrix_int);
 void printMatrix(vector<vector<char>>& matrix_int);
+void printStack(stack<int> stk);
 
 #endif /* main_h */
