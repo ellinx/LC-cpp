@@ -161,6 +161,7 @@ public:
     int findLHS(vector<int>& nums);
     bool isSubsequence(string s, string t);
     bool find132pattern(vector<int>& nums);
+    int calculate(string s);
 };
 
 

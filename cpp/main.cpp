@@ -89,7 +89,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	bool result = dummy.find132pattern(vec_int);
+	int result = dummy.calculate(" 1-5 + 2 ");
 	cout<<"result is:"<<endl;
 	
 	
