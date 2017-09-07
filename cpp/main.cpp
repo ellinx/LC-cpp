@@ -89,7 +89,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.isMatchRegE("", ".*");
+	int result = dummy.isMatchWildcard("aab", "c*a*b");
 	cout<<"result is:"<<endl;
 	
 	
