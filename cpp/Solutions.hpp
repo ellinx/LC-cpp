@@ -162,6 +162,7 @@ public:
     bool isSubsequence(string s, string t);
     bool find132pattern(vector<int>& nums);
     int calculate(string s);
+    bool isMatchRegE(string s, string p);
 };
 
 

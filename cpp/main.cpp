@@ -89,7 +89,7 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.calculate(" 1-5 + 2 ");
+	int result = dummy.isMatchRegE("", ".*");
 	cout<<"result is:"<<endl;
 	
 	
@@ -178,6 +178,16 @@ void printVector(vector<int>& vec) {
 		}
 	}
 	cout<<"]"<<endl;
+}
+void printVector(vector<bool>& vec) {
+    cout<<"[";
+    for (int i=0;i<vec.size();i++) {
+        cout<<vec[i];
+        if (i<vec.size()-1) {
+            cout<<",";
+        }
+    }
+    cout<<"]"<<endl;
 }
 void printVector(vector<char>& vec) {
     cout<<"[";

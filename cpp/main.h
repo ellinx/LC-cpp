@@ -11,6 +11,7 @@
 
 void printVector(vector<int>& vec);
 void printVector(vector<char>& vec);
+void printVector(vector<bool>& vec);
 void printVector(vector<string>& vec);
 void printVector(vector<Interval>& vec);
 void printList(ListNode* head);
