@@ -10,26 +10,23 @@ using namespace std;
  Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].
 */
 
-vector<int> Solutions::singleNumber(vector<int>& nums) {
-    int allXOR = 0;
+vector<int> Solutions::singleNumberIII(vector<int>& nums) {
+    unordered_map<int, int> mp;
+    vector<int> res;
+    
     for (int num : nums) {
-        allXOR ^= num;
-    }
-
-    int set_position = 0;
-    while ((allXOR & 1) != 1) {
-        set_position++;
-        allXOR = allXOR >> 1;
-    }
-
-    int dif = 1 << set_position;
-    vector<int> res(2,0);
-    for (int num : nums) {
-        if ((num & dif) == 0) {
-            res[0] ^= num;
+        if (mp.find(num)==mp.end()) {
+            mp[num] = 1;
         } else {
-            res[1] ^= num;
+            mp[num]++;
         }
     }
+    
+    for (auto& kv : mp) {
+        if (kv.second==1) {
+            res.push_back(kv.first);
+        }
+    }
+    
     return res;
 }
