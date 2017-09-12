@@ -20,15 +20,17 @@ int main() {
 	ListNode* list_int = NULL;
 	ListNode* list_int2 = NULL;
 
-    int nums[] = {3,1,4,2};
+    int nums[] = {1, 2, 3, 1,6,8,10,4};
 	int nums2[] = {5, 6, 4};
     
     string words[] = {"oath","pea","eat","rain"};
 
 	int matrixInt[][MATRIX_INT_COL] = {
-		{3, 4, 5},
-		{3, 2, 6},
-		{2, 2, 1}
+		{12,13,1,12},
+		{13,4,13,12},
+		{13,8,10,12},
+        {12,13,12,12},
+        {13,13,13,13}
 	};
     
     char matrixChar[][MATRIX_CHAR_COL] = {
@@ -54,7 +56,7 @@ int main() {
     //******************************************************************************************
     
     //******************* print inputs ******************************************************
-    int input_type = INPUT_VEC_INT;
+    int input_type = INPUT_MATRIX_INT;
     
     switch(input_type) {
         case INPUT_VEC_INT:
@@ -89,12 +91,12 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.isMatchWildcard("aab", "c*a*b");
+	int result = dummy.findPeakElement(vec_int);
 	cout<<"result is:"<<endl;
 	
 	
 	//printMatrix(matrix_int);
-    //printVector(result);
+//    printVector(result);
 	cout<<result<<endl;
 	//printList(result);
     return 0;
@@ -209,9 +211,25 @@ void printVector(vector<string>& vec) {
     }
     cout<<"]"<<endl;
 }
-
+void printVector(vector<pair<int,int>>& vec) {
+    cout<<"[";
+    for (int i=0;i<vec.size();i++) {
+        cout<<"["<<vec[i].first<<","<<vec[i].second<<"]";
+        if (i<vec.size()-1) {
+            cout<<",";
+        }
+    }
+    cout<<"]"<<endl;
+}
 void printVector(vector<Interval> & vec) {
-    
+    cout<<"[";
+    for (int i=0;i<vec.size();i++) {
+        cout<<"["<<vec[i].start<<","<<vec[i].end<<"]";
+        if (i<vec.size()-1) {
+            cout<<",";
+        }
+    }
+    cout<<"]"<<endl;
 }
 
 void printList(ListNode* head) {

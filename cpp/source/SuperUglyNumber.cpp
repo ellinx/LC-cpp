@@ -1,7 +1,3 @@
-#include "../Solutions.hpp"
-#include "../main.h"
-
-using namespace std;
 
 /***************** Super Ugly Number *****************/
 /*
@@ -15,6 +11,9 @@ using namespace std;
  (3) 0 < k ≤ 100, 0 < n ≤ 106, 0 < primes[i] < 1000.
  (4) The nth super ugly number is guaranteed to fit in a 32-bit signed integer.
  */
+
+#include "../Solutions.hpp"
+#include "../main.h"
 
 int Solutions::nthSuperUglyNumber(int n, vector<int>& primes) {
     vector<int> dp(n,0);

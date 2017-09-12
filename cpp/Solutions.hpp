@@ -22,18 +22,7 @@
 
 using namespace std;
 
-#define INPUT_MANUAL        (0)
-#define INPUT_VEC_INT       (1)
-#define INPUT_VEC_STR       (2)
-#define INPUT_VEC_INTERVALS (3)
-#define INPUT_LIST_INT		(4)
-#define INPUT_MATRIX_INT	(5)
-#define INPUT_MATRIX_CHAR	(6)
 
-#define MATRIX_INT_ROW		(3)
-#define MATRIX_INT_COL		(3)
-#define MATRIX_CHAR_ROW		(3)
-#define MATRIX_CHAR_COL		(4)
 
 struct TreeNode {
     int val;
@@ -163,6 +152,9 @@ public:
     bool find132pattern(vector<int>& nums);
     int calculate(string s);
     bool isMatchRegE(string s, string p);
+    vector<string> findMissingRanges(vector<int> nums, int lower, int upper);
+    int trapRainWaterII(vector<vector<int>>& heightMap);
+    int findPeakElement(vector<int>& nums);
 };
 
 
