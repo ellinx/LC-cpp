@@ -156,6 +156,7 @@ public:
     int trapRainWaterII(vector<vector<int>>& heightMap);
     int findPeakElement(vector<int>& nums);
     int kthSmallest(TreeNode* root, int k);
+    vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges);
 };
 
 
