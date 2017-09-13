@@ -155,6 +155,7 @@ public:
     vector<string> findMissingRanges(vector<int> nums, int lower, int upper);
     int trapRainWaterII(vector<vector<int>>& heightMap);
     int findPeakElement(vector<int>& nums);
+    int kthSmallest(TreeNode* root, int k);
 };
 
 
