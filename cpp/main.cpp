@@ -1,8 +1,6 @@
 #include "Solutions.hpp"
 #include "main.h"
 
-using namespace std;
-
 vector<int> InitVectorInt(int array[], int n);
 vector<string> InitVectorString(string array[], int n);
 vector<Interval> InitVectorInterval(Interval array[], int n);
@@ -20,7 +18,7 @@ int main() {
 	ListNode* list_int = NULL;
 	ListNode* list_int2 = NULL;
 
-    int nums[] = {1, 2, 3, 1,6,8,10,4};
+    int nums[] = {1, 2, 3, 4,5};
 	int nums2[] = {5, 6, 4};
     
     string words[] = {"oath","pea","eat","rain"};
@@ -56,7 +54,7 @@ int main() {
     //******************************************************************************************
     
     //******************* print inputs ******************************************************
-    int input_type = INPUT_MATRIX_INT;
+    int input_type = INPUT_LIST_INT;
     
     switch(input_type) {
         case INPUT_VEC_INT:
@@ -74,7 +72,7 @@ int main() {
 		case INPUT_LIST_INT:
 			cout<<"Input:"<<endl;
             printList(list_int);
-            printList(list_int2);
+            //printList(list_int2);
 			break;
 		case INPUT_MATRIX_INT:
 			cout<<"Input:"<<endl;
@@ -91,14 +89,14 @@ int main() {
     //******************************************************************************************
 
     //test code
-	int result = dummy.findPeakElement(vec_int);
+	string result = dummy.getPermutation(3,1);
 	cout<<"result is:"<<endl;
 	
 	
 	//printMatrix(matrix_int);
 //    printVector(result);
 	cout<<result<<endl;
-	//printList(result);
+    //printList(result);
     return 0;
 }
 

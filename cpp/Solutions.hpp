@@ -157,6 +157,8 @@ public:
     int findPeakElement(vector<int>& nums);
     int kthSmallest(TreeNode* root, int k);
     vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges);
+    ListNode* rotateRight(ListNode* head, int k);
+    string getPermutation(int n, int k);
 };
 
 
