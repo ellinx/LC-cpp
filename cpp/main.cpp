@@ -1,57 +1,37 @@
 #include "Solutions.hpp"
 #include "main.h"
+#include "Tester.hpp"
 
-vector<int> InitVectorInt(int array[], int n);
-vector<string> InitVectorString(string array[], int n);
-vector<Interval> InitVectorInterval(Interval array[], int n);
-ListNode* InitListInt(int array[], int n);
-vector<vector<int>> InitMatrixInt(int array[][MATRIX_INT_COL], int totalRow, int totalCol);
-vector<vector<char>> InitMatrixChar(char array[][MATRIX_CHAR_COL],int totalRow, int totalCol);
 
 int main() {
     Solutions dummy;
-    vector<int> vec_int;
-    vector<string> vec_string;
-    vector<Interval> vec_interval;
-	vector<vector<int>> matrix_int;
-    vector<vector<char>> matrix_char;
-	ListNode* list_int = NULL;
-	ListNode* list_int2 = NULL;
+    Tester tester;
+    
+    //inputs
+    vector<int> vec_int = {1, 2, 3, 4, 5};
+    vector<string> vec_string = {"oath","pea","eat","rain"};
+    vector<Interval> vec_interval = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
+    vector<vector<int>> matrix_int = {
+                            {12,13,1,12},
+                            {13,4,13,12},
+                            {13,8,10,12},
+                            {12,13,12,12},
+                            {13,13,13,13}
+                        };
+    vector<vector<char>> matrix_char = {
+                            /*{'o', 'a', 'a', 'n'},
+                            {'e', 't', 'a', 'e'},
+                            {'i', 'h', 'k', 'r'},
+                            {'i', 'f', 'l', 'v'}*/
+                            {'A','B','C','E'},
+                            {'S','F','C','S'},
+                            {'A','D','E','E'}
+                        };
+    
+	ListNode* list_int = tester.initListInt(vector<int>{1, 2, 3, 4, 5});
+	ListNode* list_int2 = tester.initListInt(vector<int>{5, 6, 4});
 
-    int nums[] = {1, 2, 3, 4,5};
-	int nums2[] = {5, 6, 4};
-    
-    string words[] = {"oath","pea","eat","rain"};
 
-	int matrixInt[][MATRIX_INT_COL] = {
-		{12,13,1,12},
-		{13,4,13,12},
-		{13,8,10,12},
-        {12,13,12,12},
-        {13,13,13,13}
-	};
-    
-    char matrixChar[][MATRIX_CHAR_COL] = {
-        /*{'o', 'a', 'a', 'n'},
-        {'e', 't', 'a', 'e'},
-        {'i', 'h', 'k', 'r'},
-        {'i', 'f', 'l', 'v'}*/
-        {'A','B','C','E'},
-        {'S','F','C','S'},
-        {'A','D','E','E'}
-    };
-    
-    Interval intervals[] = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
-    
-    //****** initialize inputs *****************************************************************
-    vec_int = InitVectorInt(nums, sizeof(nums)/sizeof(nums[0]));
-    vec_string = InitVectorString(words, sizeof(words)/sizeof(words[0]));
-    vec_interval = InitVectorInterval(intervals, sizeof(intervals)/sizeof(intervals[0]));
-    list_int = InitListInt(nums, sizeof(nums)/sizeof(nums[0]));
-    list_int2 = InitListInt(nums2, sizeof(nums2)/sizeof(nums2[0]));
-    matrix_int = InitMatrixInt(matrixInt, MATRIX_INT_ROW, MATRIX_INT_COL);
-    matrix_char = InitMatrixChar(matrixChar, MATRIX_CHAR_ROW, MATRIX_CHAR_COL);
-    //******************************************************************************************
     
     //******************* print inputs ******************************************************
     int input_type = INPUT_LIST_INT;
@@ -100,73 +80,6 @@ int main() {
     return 0;
 }
 
-
-//Initialization functions
-vector<int> InitVectorInt(int array[], int n) {
-    vector<int> res;
-    for (int i=0;i<n;i++) {
-        res.push_back(array[i]);
-    }
-
-    return res;
-}
-
-vector<string> InitVectorString(string array[], int n) {
-    vector<string> res;
-    for (int i=0;i<n;i++) {
-        res.push_back(array[i]);
-    }
-
-    return res;
-}
-
-vector<Interval> InitVectorInterval(Interval array[], int n) {
-    vector<Interval> res;
-    for (int i=0;i<n;i++) {
-        res.push_back(array[i]);
-    }
-    
-    return res;
-}
-
-ListNode* InitListInt(int array[], int n) {
-	
-	ListNode* head = new ListNode(array[0]);
-	ListNode* cur = head;
-
-	for (int i=1;i<n;i++) {
-		cur->next = new ListNode(array[i]);
-		cur = cur->next;
-	}
-
-	return head;
-}
-
-vector<vector<int>> InitMatrixInt(int array[][MATRIX_INT_COL], int totalRow, int totalCol) {
-	vector<int> row(totalCol, 0);
-	vector<vector<int>> res(totalRow, row);
-
-	for (int i=0;i<totalRow;i++) {
-		for (int j=0;j<totalCol;j++) {
-			res[i][j] = array[i][j];
-		}
-	}
-
-	return res;
-}
-
-vector<vector<char>> InitMatrixChar(char array[][MATRIX_CHAR_COL],int totalRow, int totalCol) {
-    vector<char> row(totalCol, '0');
-    vector<vector<char>> res(totalRow, row);
-    
-    for (int i=0;i<totalRow;i++) {
-        for (int j=0;j<totalCol;j++) {
-            res[i][j] = array[i][j];
-        }
-    }
-
-    return res;
-}
 
 //print functions
 void printVector(vector<int>& vec) {
