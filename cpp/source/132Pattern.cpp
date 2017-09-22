@@ -1,5 +1,5 @@
 #include "../Solutions.hpp"
-#include "main.h"
+#include "../Tester.hpp"
 
 using namespace std;
 
@@ -39,7 +39,7 @@ bool Solutions::find132pattern(vector<int>& nums) {
     for (int i=1;i<n;i++) {
         vec[i] = min(vec[i-1], nums[i]);
     }
-    printVector(vec);
+    Tester::print(vec);
     
     for (int i=n-1;i>0;i--) {
         if (nums[i]>vec[i-1]) {
@@ -51,7 +51,7 @@ bool Solutions::find132pattern(vector<int>& nums) {
             }
             akStk.push(nums[i]);
         }
-        printStack(akStk);
+        Tester::print(akStk);
     }
     return false;
 }

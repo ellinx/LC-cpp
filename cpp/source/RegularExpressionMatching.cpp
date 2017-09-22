@@ -1,5 +1,5 @@
 #include "../Solutions.hpp"
-#include "../main.h"
+#include "../Tester.hpp"
 
 using namespace std;
 
@@ -56,7 +56,7 @@ bool Solutions::isMatchRegE(string s, string p) {
         }
     }
     for (auto vec : dp) {
-        printVector(vec);
+        Tester::print(vec);
     }
     return dp[m][n];
 }

@@ -17,5 +17,19 @@ class Tester {
     
 public:
     static ListNode* initListInt(vector<int> vec);
-    static void print();
+    static void print(int n);
+    static void print(string s);
+    static void print(ListNode* head);
+    
+    static void print(vector<int>& vec);
+    static void print(vector<string>& vec);
+    static void print(vector<bool>& vec);
+    static void print(vector<char>& vec);
+    static void print(vector<pair<int,int>>& vec);
+    static void print(vector<Interval> & vec);
+    
+    static void print(vector<vector<int>>& matrix);
+    static void print(vector<vector<char>>& matrix);
+    
+    static void print(stack<int> stk);
 };

@@ -8,7 +8,7 @@
  */
 
 #include "../Solutions.hpp"
-#include "../main.h"
+#include "../Tester.hpp"
 
 /**
  * Definition for singly-linked list.
@@ -31,7 +31,7 @@ ListNode* Solutions::rotateRight(ListNode* head, int k) {
     nums.push_back(cur->val);
     
     cur = head;
-    printVector(nums);
+    Tester::print(nums);
     k %= nums.size();
     for (int i=nums.size()-k;i<nums.size();i++) {
         cur->val = nums[i];

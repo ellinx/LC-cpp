@@ -1,6 +1,3 @@
-#include "../Solutions.hpp"
-
-using namespace std;
 
 /***************** Coin Change *****************/
 /*
@@ -28,6 +25,9 @@ Given a number of dollars, n, and a list of dollar values for m distinct coins, 
  2.How many ways can you make change for less than 0 dollars if you have no coins?
  If you are having trouble defining the storage for your precomputed values, then think about it in terms of the base case(n=0).
  */
+
+#include "../Solutions.hpp"
+
 
 //combination if coin order does not matter
 long long Solutions::coinChange(vector<int>& coins, int money) {

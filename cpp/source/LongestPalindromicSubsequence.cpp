@@ -1,5 +1,5 @@
 #include "../Solutions.hpp"
-#include "../main.h"
+#include "../Tester.hpp"
 
 using namespace std;
 
@@ -44,7 +44,7 @@ int Solutions::longestPalindromeSubseq(string s) {
         }
     }
 //    for (auto vec : dp) {
-//        printVector(vec);
+//        Tester::print(vec);
 //    }
     return dp[1][n];
 }

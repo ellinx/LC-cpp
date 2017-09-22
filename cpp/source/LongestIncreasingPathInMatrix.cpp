@@ -1,5 +1,5 @@
 #include "../Solutions.hpp"
-#include "../main.h"
+#include "../Tester.hpp"
 
 using namespace std;
 
@@ -67,6 +67,6 @@ int Solutions::longestIncreasingPath(vector<vector<int>>& matrix) {
         }
     }
     cout<<"finish"<<endl;
-    printMatrix(dp);
+    Tester::print(dp);
     return res;
 }

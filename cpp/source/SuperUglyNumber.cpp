@@ -13,7 +13,7 @@
  */
 
 #include "../Solutions.hpp"
-#include "../main.h"
+#include "../Tester.hpp"
 
 int Solutions::nthSuperUglyNumber(int n, vector<int>& primes) {
     vector<int> dp(n,0);
@@ -34,6 +34,6 @@ int Solutions::nthSuperUglyNumber(int n, vector<int>& primes) {
         }
     }
     
-    printVector(dp);
+    Tester::print(dp);
     return dp.back();
 }
