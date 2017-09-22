@@ -4,8 +4,7 @@
 
 int main() {
     Solutions dummy;
-    Tester tester;
-    
+
     //inputs
     vector<int> vec_int = {1, 2, 3, 4, 5};
     vector<string> vec_string = {"oath","pea","eat","rain"};
@@ -27,8 +26,8 @@ int main() {
                             {'A','D','E','E'}
                         };
     
-	ListNode* list_int = tester.initListInt(vector<int>{1, 2, 3, 4, 5});
-	ListNode* list_int2 = tester.initListInt(vector<int>{5, 6, 4});
+    ListNode* list_int = Tester::initListInt(vector<int>{1, 2, 3, 4, 5});
+    ListNode* list_int2 = Tester::initListInt(vector<int>{5, 6, 4});
 
     cout<<endl;
 
@@ -38,7 +37,7 @@ int main() {
     cout<<"################################################"<<endl;
 	cout<<"result is:"<<endl;
 	
-    tester.print(result);
+    Tester::print(result);
 
     return 0;
 }
