@@ -1,5 +1,3 @@
-#include "../Solutions.hpp"
-using namespace std;
 
 /**************** Valid Anagram **********************/
 /*
@@ -10,6 +8,9 @@ using namespace std;
  s = "rat", t = "car", return false.
 */
 
+#include "../Solutions.hpp"
+
+
 bool Solutions::isAnagram(string s, string t) {
     if (s.size() != t.size()) {
         return false;
@@ -18,19 +19,14 @@ bool Solutions::isAnagram(string s, string t) {
     if (size == 0) {
         return true;
     }
-    char* s_cstr = new char[size];
-    char* t_cstr = new char[size];
-    strcpy(s_cstr, s.c_str());
-    strcpy(t_cstr, t.c_str());
-    sort(s_cstr, s_cstr+size);
-    sort(t_cstr, t_cstr+size);
+    
+    sort(s.begin(), s.end());
+    sort(t.begin(), t.end());
 
     for (int i=0;i<size;i++) {
-        if (s_cstr[i] != t_cstr[i]) {
+        if (s[i] != t[i]) {
             return false;
         }
     }
-    delete[] s_cstr;
-    delete[] t_cstr;
     return true;
 }
