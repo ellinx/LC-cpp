@@ -7,7 +7,7 @@ int main() {
 
     //inputs
     vector<int> vec_int = {1, 2, 3, 4, 5};
-    vector<string> vec_string = {"oath","pea","eat","rain"};
+    vector<string> vec_string = {"OOOOOOOOXOOOOOXOOOOO","OOOOOOOXOOOOOOOOOOOO","XOOXOXOOOOXOOXOOOOOO","OOOOOOOOOOOOOOOOOXXO","OXXOOOOOOXOOOOOOOOOO","OOOOXOOOOOOXOOOOOXXO","OOOOOOOXOOOOOOOOOOOO","OOOOOOOOOOOOOXOOOOOO","OOOOOOOOOOOOOOOOOOXO","OOOOOXOOOOOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","OOOOXOOOOXOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","XOOOOOOOOXXOOOOOOOOO","OOOOOOOOOOOXOOOOOOOO","OOOOXOOOOOOOOXOOOOOX","OOOOOXOOOOOOOOOXOXOO","OXOOOOOOOOOOOOOOOOOO","OOOOOOOOXXOOOXOOXOOX","OOOOOOOOOOOOOOOOOOOO"};
     vector<Interval> vec_interval = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
     vector<vector<int>> matrix_int = {
                             {12,13,1,12},
@@ -19,11 +19,11 @@ int main() {
     vector<vector<char>> matrix_char = {
                             /*{'o', 'a', 'a', 'n'},
                             {'e', 't', 'a', 'e'},
-                            {'i', 'h', 'k', 'r'},
-                            {'i', 'f', 'l', 'v'}*/
-                            {'A','B','C','E'},
-                            {'S','F','C','S'},
-                            {'A','D','E','E'}
+                            {'i', 'h', 'k', 'r'},*/
+                            {'X','O','X','O','X','O'},
+                            {'O','X','O','X','O','X'},
+                            {'X','O','X','O','X','O'},
+                            {'O','X','O','X','O','X'}
                         };
     
     ListNode* list_int = Tester::initListInt(vector<int>{1, 2, 3, 4, 5});
@@ -32,12 +32,14 @@ int main() {
     cout<<endl;
 
     //test code
-	vector<string> result = dummy.restoreIpAddresses("0690");
+    vector<string> result;
+    vector<vector<char>> tmp = Tester::initMatrixChar(vec_string);
+    dummy.solve(tmp);
     
     cout<<"################################################"<<endl;
 	cout<<"result is:"<<endl;
 	
-    Tester::print(result);
+    Tester::print(tmp);
 
     return 0;
 }

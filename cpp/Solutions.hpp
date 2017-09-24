@@ -160,6 +160,7 @@ public:
     ListNode* rotateRight(ListNode* head, int k);
     string getPermutation(int n, int k);
     vector<string> restoreIpAddresses(string s);
+    void solve(vector<vector<char>>& board);
 };
 
 

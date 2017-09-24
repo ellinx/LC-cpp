@@ -21,6 +21,18 @@ ListNode* Tester::initListInt(vector<int> vec) {
     return head;
 }
 
+vector<vector<char>> Tester::initMatrixChar(vector<string>& vec) {
+    vector<vector<char>> res;
+    for (int i=0;i<vec.size();i++) {
+        vector<char> sub;
+        for (char a : vec[i]) {
+            sub.push_back(a);
+        }
+        res.push_back(sub);
+    }
+    return res;
+}
+
 
 //print functions
 void Tester::print(int n){
