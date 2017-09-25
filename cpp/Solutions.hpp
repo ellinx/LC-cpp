@@ -50,6 +50,12 @@ struct UndirectedGraphNode {
     UndirectedGraphNode(int x) : label(x) {};
 };
 
+struct RandomListNode {
+    int label;
+    RandomListNode *next, *random;
+    RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
+};
+
 class Solutions{
 public:
     vector<int> countBits(int num);
@@ -161,6 +167,7 @@ public:
     string getPermutation(int n, int k);
     vector<string> restoreIpAddresses(string s);
     void solve(vector<vector<char>>& board);
+    vector<vector<string>> partition(string s);
 };
 
 

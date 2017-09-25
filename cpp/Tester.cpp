@@ -131,6 +131,11 @@ void Tester::print(vector<vector<char>>& matrix) {
         Tester::print(matrix[i]);
     }
 }
+void Tester::print(vector<vector<string>>& matrix) {
+    for (int i=0;i<matrix.size();i++) {
+        Tester::print(matrix[i]);
+    }
+}
 
 void Tester::print(stack<int> stk) {
     cout<<"[";
@@ -141,5 +146,37 @@ void Tester::print(stack<int> stk) {
             cout<<",";
         }
     }
+    cout<<"]"<<endl;
+}
+
+void Tester::print(TreeNode* root) {
+    vector<vector<string>> levelOrder;
+    vector<TreeNode*> levelTN;
+    
+    cout<<"["<<endl;
+    if (root==NULL) {
+        cout<<"#"<<endl;
+        cout<<"]"<<endl;
+        return;
+    }
+    
+    levelTN.push_back(root);
+    while (!levelTN.empty()) {
+        vector<string> levelStr;
+        vector<TreeNode*> nextLevel;
+        for (int i=0;i<levelTN.size();i++) {
+            if (levelTN[i]==NULL) {
+                levelStr.push_back("#");
+                continue;
+            }
+            
+            nextLevel.push_back(levelTN[i]->left);
+            nextLevel.push_back(levelTN[i]->right);
+        }
+        levelOrder.push_back(levelStr);
+        levelTN = nextLevel;
+    }
+    Tester::print(levelOrder);
+    
     cout<<"]"<<endl;
 }

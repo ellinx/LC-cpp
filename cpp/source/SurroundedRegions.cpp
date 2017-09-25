@@ -82,7 +82,7 @@ void BFSMark(vector<vector<char>>& board, int row, int col) {
     while (!toVisit.empty()) {
         pair<int, int> tmp = toVisit.front();
         toVisit.pop();
-        if (board[tmp.first][tmp.second]!='O') continue;
+        if (board[tmp.first][tmp.second]!='O') continue;//could be processed already
         board[tmp.first][tmp.second] = '1';
         //add all its neighbors
         if (tmp.first>0 && board[tmp.first-1][tmp.second]=='O') {

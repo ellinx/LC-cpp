@@ -32,14 +32,12 @@ int main() {
     cout<<endl;
 
     //test code
-    vector<string> result;
-    vector<vector<char>> tmp = Tester::initMatrixChar(vec_string);
-    dummy.solve(tmp);
+    auto result = dummy.partition("aab");
     
     cout<<"################################################"<<endl;
 	cout<<"result is:"<<endl;
 	
-    Tester::print(tmp);
+    Tester::print(result);
 
     return 0;
 }

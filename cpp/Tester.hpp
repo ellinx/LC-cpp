@@ -32,6 +32,8 @@ public:
     
     static void print(vector<vector<int>>& matrix);
     static void print(vector<vector<char>>& matrix);
+    static void print(vector<vector<string>>& matrix);
     
     static void print(stack<int> stk);
+    static void print(TreeNode* root);
 };
