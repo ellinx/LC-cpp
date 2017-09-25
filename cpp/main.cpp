@@ -26,18 +26,19 @@ int main() {
                             {'O','X','O','X','O','X'}
                         };
     
-    ListNode* list_int = Tester::initListInt(vector<int>{1, 2, 3, 4, 5});
+    ListNode* list_int = Tester::initListInt(vector<int>{1, 2, 3, 4});
     ListNode* list_int2 = Tester::initListInt(vector<int>{5, 6, 4});
 
     cout<<endl;
 
     //test code
-    auto result = dummy.partition("aab");
+    //auto result = dummy.reverseList(list_int);
+    dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
 	cout<<"result is:"<<endl;
 	
-    Tester::print(result);
+    Tester::print(list_int);
 
     return 0;
 }

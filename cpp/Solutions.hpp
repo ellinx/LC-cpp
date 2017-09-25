@@ -168,6 +168,8 @@ public:
     vector<string> restoreIpAddresses(string s);
     void solve(vector<vector<char>>& board);
     vector<vector<string>> partition(string s);
+    ListNode* reverseBetween(ListNode* head, int m, int n);
+    void reorderList(ListNode* head);
 };
 
 
