@@ -170,6 +170,8 @@ public:
     vector<vector<string>> partition(string s);
     ListNode* reverseBetween(ListNode* head, int m, int n);
     void reorderList(ListNode* head);
+    ListNode* sortList(ListNode* head);
+    string largestNumber(vector<int>& nums);
 };
 
 

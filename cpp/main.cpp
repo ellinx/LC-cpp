@@ -6,7 +6,7 @@ int main() {
     Solutions dummy;
 
     //inputs
-    vector<int> vec_int = {1, 2, 3, 4, 5};
+    vector<int> vec_int = {3, 30, 34, 5, 9};
     vector<string> vec_string = {"OOOOOOOOXOOOOOXOOOOO","OOOOOOOXOOOOOOOOOOOO","XOOXOXOOOOXOOXOOOOOO","OOOOOOOOOOOOOOOOOXXO","OXXOOOOOOXOOOOOOOOOO","OOOOXOOOOOOXOOOOOXXO","OOOOOOOXOOOOOOOOOOOO","OOOOOOOOOOOOOXOOOOOO","OOOOOOOOOOOOOOOOOOXO","OOOOOXOOOOOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","OOOOXOOOOXOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","XOOOOOOOOXXOOOOOOOOO","OOOOOOOOOOOXOOOOOOOO","OOOOXOOOOOOOOXOOOOOX","OOOOOXOOOOOOOOOXOXOO","OXOOOOOOOOOOOOOOOOOO","OOOOOOOOXXOOOXOOXOOX","OOOOOOOOOOOOOOOOOOOO"};
     vector<Interval> vec_interval = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
     vector<vector<int>> matrix_int = {
@@ -26,19 +26,19 @@ int main() {
                             {'O','X','O','X','O','X'}
                         };
     
-    ListNode* list_int = Tester::initListInt(vector<int>{1, 2, 3, 4});
+    ListNode* list_int = Tester::initListInt(vector<int>{1, 5, 3, 4, 9, 2});
     ListNode* list_int2 = Tester::initListInt(vector<int>{5, 6, 4});
 
     cout<<endl;
 
     //test code
-    //auto result = dummy.reverseList(list_int);
-    dummy.reorderList(list_int);
+    auto result = dummy.largestNumber(vec_int);
+    //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
 	cout<<"result is:"<<endl;
 	
-    Tester::print(list_int);
+    Tester::print(result);
 
     return 0;
 }

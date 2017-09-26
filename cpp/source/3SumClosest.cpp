@@ -1,6 +1,3 @@
-#include "../Solutions.hpp"
-
-using namespace std;
 
 /***************** 3Sum Closest *****************/
 /*
@@ -10,6 +7,8 @@ using namespace std;
  
  The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 */
+
+#include "../Solutions.hpp"
 
 int Solutions::threeSumClosest(vector<int>& nums, int target) {
     int res=nums[0]+nums[1]+nums[2];

@@ -26,8 +26,6 @@ void ConvertBTtoCLL(TreeNode* root) {
 }
 
 TreeNode* help(TreeNode* root) {
-    TreeNode* res = NULL;
-    
     TreeNode* left = NULL;
     TreeNode* right = NULL;
     
