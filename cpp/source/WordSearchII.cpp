@@ -1,6 +1,3 @@
-#include "../Solutions.hpp"
-
-using namespace std;
 
 /***************** Word Search II *****************/
 /*
@@ -19,6 +16,8 @@ using namespace std;
  ]
  Return ["eat","oath"].
 */
+
+#include "../Solutions.hpp"
 
 bool helper(vector<vector<char>>& board, string target, int x, int y);
 //extern void printMatrix(vector<vector<char>>& matrix);

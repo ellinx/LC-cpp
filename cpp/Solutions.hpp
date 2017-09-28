@@ -172,6 +172,10 @@ public:
     void reorderList(ListNode* head);
     ListNode* sortList(ListNode* head);
     string largestNumber(vector<int>& nums);
+    int rangeBitwiseAnd(int m, int n);
+    bool containsDuplicate(vector<int>& nums);
+    bool containsNearbyDuplicate(vector<int>& nums, int k);
+    bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t);
 };
 
 

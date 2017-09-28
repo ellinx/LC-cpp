@@ -39,6 +39,10 @@ void Tester::print(int n){
     cout<<n<<endl;
 }
 
+void Tester::print(long long n){
+    cout<<n<<endl;
+}
+
 void Tester::print(string s) {
     cout<<s<<endl;
 }

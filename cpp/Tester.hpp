@@ -20,6 +20,7 @@ public:
     static vector<vector<char>> initMatrixChar(vector<string>& vec);
     
     static void print(int n);
+    static void print(long long n);
     static void print(string s);
     static void print(ListNode* head);
     
