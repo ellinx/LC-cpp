@@ -37,7 +37,31 @@ bool Solutions::containsNearbyDuplicate(vector<int>& nums, int k) {
  Given an array of integers, find out whether there are two distinct indices i and j in the array such that the absolute difference between nums[i] and nums[j] is at most t and the absolute difference between i and j is at most k.
  */
 
+//bucket
 bool Solutions::containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
+    if (k<1 || t<0) return false;
+    
+    unordered_map<long long, long long> mp;
+    for (int i=0;i<nums.size();i++) {
+        if (i>k) {
+            long long tmp = (long long)nums[i-k-1]-INT_MIN;
+            tmp /= (long long)t + 1;
+            mp.erase(tmp);
+        }
+        
+        long long val = (long long)nums[i]-INT_MIN;
+        long long bucket = val/((long long)t+1);
+        if (mp.find(bucket)!=mp.end() || (mp.find(bucket-1)!=mp.end() && val-mp[bucket-1]<=t)
+            || (mp.find(bucket+1)!=mp.end() && mp[bucket+1]-val<=t)) {
+            return true;
+        }
+        mp.emplace(bucket, val);
+    }
+    return false;
+}
+
+//
+bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
     if (nums.size()<2) return false;
     
     set<long long> vals;
