@@ -28,6 +28,7 @@ public:
     static void print(vector<string>& vec);
     static void print(vector<bool>& vec);
     static void print(vector<char>& vec);
+    static void print(vector<TreeNode*>& vec);
     static void print(vector<pair<int,int>>& vec);
     static void print(vector<Interval> & vec);
     

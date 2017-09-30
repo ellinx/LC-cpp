@@ -55,7 +55,6 @@ public class ContainsDuplicate {
         	if (i>k) {
         		long tmp = (long)nums[i-k-1]-Integer.MIN_VALUE;
         		tmp /= (long)t+1;
-        		System.out.println("remove bucket="+tmp);
         		map.remove(tmp);
         	}
         	long val = (long)nums[i]-Integer.MIN_VALUE;

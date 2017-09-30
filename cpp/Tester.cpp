@@ -113,6 +113,17 @@ void Tester::print(vector<Interval>& vec) {
     cout<<"]"<<endl;
 }
 
+void Tester::print(vector<TreeNode*>& vec) {
+    cout<<"[";
+    for (int i=0;i<vec.size();i++) {
+        cout<<vec[i]->val;
+        if (i<vec.size()-1) {
+            cout<<",";
+        }
+    }
+    cout<<"]"<<endl;
+}
+
 void Tester::print(ListNode* head) {
     cout<<"[";
     while (head != NULL) {

@@ -6,7 +6,7 @@ int main() {
     Solutions dummy;
 
     //inputs
-    vector<int> vec_int = {-2147483648,-2147483647};
+    vector<int> vec_int = {1,2};
     vector<string> vec_string = {"OOOOOOOOXOOOOOXOOOOO","OOOOOOOXOOOOOOOOOOOO","XOOXOXOOOOXOOXOOOOOO","OOOOOOOOOOOOOOOOOXXO","OXXOOOOOOXOOOOOOOOOO","OOOOXOOOOOOXOOOOOXXO","OOOOOOOXOOOOOOOOOOOO","OOOOOOOOOOOOOXOOOOOO","OOOOOOOOOOOOOOOOOOXO","OOOOOXOOOOOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","OOOOXOOOOXOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","XOOOOOOOOXXOOOOOOOOO","OOOOOOOOOOOXOOOOOOOO","OOOOXOOOOOOOOXOOOOOX","OOOOOXOOOOOOOOOXOXOO","OXOOOOOOOOOOOOOOOOOO","OOOOOOOOXXOOOXOOXOOX","OOOOOOOOOOOOOOOOOOOO"};
     vector<Interval> vec_interval = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
     vector<vector<int>> matrix_int = {
@@ -28,11 +28,13 @@ int main() {
     
     ListNode* list_int = Tester::initListInt(vector<int>{1, 5, 3, 4, 9, 2});
     ListNode* list_int2 = Tester::initListInt(vector<int>{5, 6, 4});
+    
+    TreeNode* root = dummy.ConstructFromInorder(vec_int);
 
     cout<<endl;
 
     //test code
-    auto result = dummy.containsNearbyAlmostDuplicate(vec_int, 3 , 3);
+    auto result = dummy.countNodes(root);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
