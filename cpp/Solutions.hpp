@@ -177,6 +177,8 @@ public:
     bool containsNearbyDuplicate(vector<int>& nums, int k);
     bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t);
     int countNodes(TreeNode* root);
+    int majorityElementI(vector<int>& nums);
+    vector<int> majorityElementII(vector<int>& nums);
 };
 
 
