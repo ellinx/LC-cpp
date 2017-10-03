@@ -34,7 +34,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.findDuplicate(vec_int);
+    auto result = dummy.getHint("1807","7810");
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

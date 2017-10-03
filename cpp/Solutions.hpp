@@ -180,6 +180,7 @@ public:
     int majorityElementI(vector<int>& nums);
     vector<int> majorityElementII(vector<int>& nums);
     int findDuplicate(vector<int>& nums);
+    string getHint(string secret, string guess);
 };
 
 
