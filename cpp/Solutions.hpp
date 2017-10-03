@@ -179,6 +179,7 @@ public:
     int countNodes(TreeNode* root);
     int majorityElementI(vector<int>& nums);
     vector<int> majorityElementII(vector<int>& nums);
+    int findDuplicate(vector<int>& nums);
 };
 
 

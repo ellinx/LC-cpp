@@ -10,13 +10,25 @@
 int Solutions::countNodes(TreeNode* root) {
     if (root==NULL) return 0;
     
-    int sum = 0;
-    int depth
-    vector<TreeNode*> level(1,root);
+    TreeNode* l = root->left;
+    TreeNode* r = root->right;
+    int lh = 1, rh =1;
     
+    while (l!=NULL) {
+        lh++;
+        l = l->left;
+    }
+    while (r!=NULL) {
+        rh++;
+        r = r->right;
+    }
+    
+    if (lh==rh) return (1<<lh)-1;
+    
+    return countNodes(root->left) + countNodes(root->right) +1;
 }
 
-
+//BFS
 int countNodes(TreeNode* root) {
     if (root==NULL) return 0;
     
