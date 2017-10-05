@@ -34,7 +34,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.getHint("1807","7810");
+    auto result = dummy.isAdditiveNumber("1203");
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

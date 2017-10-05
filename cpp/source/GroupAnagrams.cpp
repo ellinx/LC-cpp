@@ -1,7 +1,5 @@
 #include "../Solutions.hpp"
 
-using namespace std;
-
 /***************** Group Anagrams *****************/
 /*
 Given an array of strings, group anagrams together.
