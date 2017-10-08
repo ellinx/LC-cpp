@@ -133,7 +133,7 @@ public:
     vector<string> findWords(vector<vector<char>>& board, vector<string>& words);
     int findCircleNum(vector<vector<int>>& M);
     int singleNumberII(vector<int>& nums);
-    long long coinChange(vector<int>& coins, int money);
+    int coinChange(vector<int>& coins, int amount);
     int minDistance(string word1, string word2);
     vector<string> findItinerary(vector<pair<string, string>> tickets);
     bool isValidSerialization(string preorder);

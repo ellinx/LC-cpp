@@ -1,3 +1,5 @@
+#include "../Solutions.hpp"
+#include "Tester.hpp"
 
 /***************** Coin Change *****************/
 /*
@@ -26,11 +28,10 @@ Given a number of dollars, n, and a list of dollar values for m distinct coins, 
  If you are having trouble defining the storage for your precomputed values, then think about it in terms of the base case(n=0).
  */
 
-#include "../Solutions.hpp"
 
 
 //combination if coin order does not matter
-long long Solutions::coinChange(vector<int>& coins, int money) {
+long long coinChangeC(vector<int>& coins, int money) {
     vector<long> answer(money+1,0);
     answer[0] = 1;
     for (int coin : coins) {
@@ -55,3 +56,32 @@ long long coinChangeP(vector<int>& coins, int money) {
     return res.back();
 }
 
+/*
+ You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+ 
+ Example 1:
+ coins = [1, 2, 5], amount = 11
+ return 3 (11 = 5 + 5 + 1)
+ 
+ Example 2:
+ coins = [2], amount = 3
+ return -1.
+ 
+ Note:
+ You may assume that you have an infinite number of each kind of coin.
+ */
+
+int Solutions::coinChange(vector<int>& coins, int amount) {
+    vector<int> dp(amount+1, -1);
+    dp[0] = 0;
+    sort(coins.begin(), coins.end(), greater<int>());
+
+    for (int i=0;i<coins.size();i++) {
+        for (int j=coins[i];j<dp.size();j++) {
+            if (dp[j-coins[i]]!=-1 && (dp[j]==-1 || dp[j]>dp[j-coins[i]]+1)) {
+                dp[j] = dp[j-coins[i]]+1;
+            }
+        }
+    }
+    return dp.back();
+}
