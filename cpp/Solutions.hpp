@@ -182,6 +182,7 @@ public:
     int findDuplicate(vector<int>& nums);
     string getHint(string secret, string guess);
     bool isAdditiveNumber(string num);
+    bool canMeasureWater(int x, int y, int z);
 };
 
 
