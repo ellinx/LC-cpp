@@ -185,6 +185,7 @@ public:
     bool canMeasureWater(int x, int y, int z);
     vector<pair<int, int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k);
     vector<int> largestDivisibleSubset(vector<int>& nums);
+    int superPow(int a, vector<int>& b);
 };
 
 
