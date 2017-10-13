@@ -33,24 +33,36 @@ import java.util.Random;
  *     ListNode(int x) { val = x; }
  * }
  */
+
+//Reservoir Sampling
+//Problem:
+//Choose k entries from n numbers. Make sure each number is selected with the probability of k/n
+//Basic idea:
+//Choose 1, 2, 3, ..., k first and put them into the reservoir.
+//For k+1, pick it with a probability of k/(k+1), and randomly replace a number in the reservoir.
+//For k+i, pick it with a probability of k/(k+i), and randomly replace a number in the reservoir.
+//Repeat until k+i reaches n
 public class LinkedListRandomNode {
-	private List<ListNode> m_nodes;
+	private ListNode m_head;
 	/** @param head The linked list's head.
     Note that the head is guaranteed to be not null, so it contains at least one node. */
 	public LinkedListRandomNode(ListNode head) {
-	    m_nodes = new ArrayList<>();
-	    ListNode cur = head;
-	    while (cur!=null) {
-	    	m_nodes.add(cur);
-	    	cur = cur.next;
-	    }
+	    m_head = head;
 	}
 	
 	/** Returns a random node's value. */
 	public int getRandom() {
-	    Random rand = new Random();
-	    int index = rand.nextInt(m_nodes.size());
-	    return m_nodes.get(index).val;
+		ListNode cur = m_head;
+		int res = cur.val;
+		int i=1;
+		while (cur.next!=null) {
+			Random rand = new Random();
+		    int random = rand.nextInt(i+1);
+		    res = (random==i)?cur.next.val:res;
+		    i++;
+		    cur = cur.next;
+		}
+	    return res;
 	}
 
 }
