@@ -35,7 +35,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.lengthLongestPath("file2.ext");
+    auto result = dummy.lastRemaining(9);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

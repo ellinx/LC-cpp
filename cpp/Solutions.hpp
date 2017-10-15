@@ -187,6 +187,7 @@ public:
     vector<int> largestDivisibleSubset(vector<int>& nums);
     int superPow(int a, vector<int>& b);
     int lengthLongestPath(string input);
+    int lastRemaining(int n);
 };
 
 
