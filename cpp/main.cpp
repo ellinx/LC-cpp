@@ -35,7 +35,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.superPow(2, vec_int);
+    auto result = dummy.lengthLongestPath("file2.ext");
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

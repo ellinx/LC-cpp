@@ -102,6 +102,17 @@ void Tester::print(vector<pair<int,int>>& vec) {
     cout<<"]"<<endl;
 }
 
+void Tester::print(vector<pair<string,int>>& vec) {
+    cout<<"[";
+    for (int i=0;i<vec.size();i++) {
+        cout<<"["<<vec[i].first<<","<<vec[i].second<<"]";
+        if (i<vec.size()-1) {
+            cout<<",";
+        }
+    }
+    cout<<"]"<<endl;
+}
+
 void Tester::print(vector<Interval>& vec) {
     cout<<"[";
     for (int i=0;i<vec.size();i++) {

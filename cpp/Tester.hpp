@@ -30,6 +30,7 @@ public:
     static void print(vector<char>& vec);
     static void print(vector<TreeNode*>& vec);
     static void print(vector<pair<int,int>>& vec);
+    static void print(vector<pair<string,int>>& vec);
     static void print(vector<Interval> & vec);
     
     static void print(vector<vector<int>>& matrix);
