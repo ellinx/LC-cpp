@@ -188,6 +188,7 @@ public:
     int superPow(int a, vector<int>& b);
     int lengthLongestPath(string input);
     int lastRemaining(int n);
+    bool validUtf8(vector<int>& data);
 };
 
 
