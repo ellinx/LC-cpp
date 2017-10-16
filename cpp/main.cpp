@@ -35,7 +35,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.validUtf8(vec_int);
+    auto result = dummy.longestSubstring("ababbc", 2);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

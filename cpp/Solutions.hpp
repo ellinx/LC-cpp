@@ -189,6 +189,7 @@ public:
     int lengthLongestPath(string input);
     int lastRemaining(int n);
     bool validUtf8(vector<int>& data);
+    int longestSubstring(string s, int k);
 };
 
 
