@@ -190,6 +190,8 @@ public:
     int lastRemaining(int n);
     bool validUtf8(vector<int>& data);
     int longestSubstring(string s, int k);
+    int integerReplacement(int n);
+    string removeKdigits(string num, int k);
 };
 
 

@@ -35,7 +35,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.longestSubstring("ababbc", 2);
+    auto result = dummy.removeKdigits("10200",1);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
