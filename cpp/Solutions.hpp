@@ -192,6 +192,7 @@ public:
     int longestSubstring(string s, int k);
     int integerReplacement(int n);
     string removeKdigits(string num, int k);
+    int findPoisonedDuration(vector<int>& timeSeries, int duration);
 };
 
 
