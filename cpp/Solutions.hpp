@@ -193,6 +193,7 @@ public:
     int integerReplacement(int n);
     string removeKdigits(string num, int k);
     int findPoisonedDuration(vector<int>& timeSeries, int duration);
+    vector<pair<int, int>> reconstructQueue(vector<pair<int, int>>& people);
 };
 
 
