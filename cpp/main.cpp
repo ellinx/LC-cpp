@@ -6,7 +6,7 @@ int main() {
     Solutions dummy;
 
     //inputs
-    vector<int> vec_int = {1,2};
+    vector<int> vec_int = {1,2,3,4};
     vector<int> vec_int2 = {1,2,3};
     vector<string> vec_string = {"OOOOOOOOXOOOOOXOOOOO","OOOOOOOXOOOOOOOOOOOO","XOOXOXOOOOXOOXOOOOOO","OOOOOOOOOOOOOOOOOXXO","OXXOOOOOOXOOOOOOOOOO","OOOOXOOOOOOXOOOOOXXO","OOOOOOOXOOOOOOOOOOOO","OOOOOOOOOOOOOXOOOOOO","OOOOOOOOOOOOOOOOOOXO","OOOOOXOOOOOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","OOOOXOOOOXOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","XOOOOOOOOXXOOOOOOOOO","OOOOOOOOOOOXOOOOOOOO","OOOOXOOOOOOOOXOOOOOX","OOOOOXOOOOOOOOOXOXOO","OXOOOOOOOOOOOOOOOOOO","OOOOOOOOXXOOOXOOXOOX","OOOOOOOOOOOOOOOOOOOO"};
     vector<pair<int,int>> vec_pair_int_int = {{7,0}};
@@ -37,7 +37,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.reconstructQueue(vec_pair_int_int);
+    auto result = dummy.numberOfArithmeticSlices(vec_int);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

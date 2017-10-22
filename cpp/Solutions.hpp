@@ -194,6 +194,7 @@ public:
     string removeKdigits(string num, int k);
     int findPoisonedDuration(vector<int>& timeSeries, int duration);
     vector<pair<int, int>> reconstructQueue(vector<pair<int, int>>& people);
+    int numberOfArithmeticSlices(vector<int>& A);
 };
 
 
