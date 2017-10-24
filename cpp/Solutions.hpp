@@ -196,6 +196,7 @@ public:
     vector<pair<int, int>> reconstructQueue(vector<pair<int, int>>& people);
     int numberOfArithmeticSlices(vector<int>& A);
     bool canPartition(vector<int>& nums);
+    int findMaximumXOR(vector<int>& nums);
 };
 
 
