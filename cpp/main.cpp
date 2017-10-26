@@ -37,7 +37,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.findMaximumXOR(vec_int);
+    auto result = dummy.originalDigits("ereth");
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

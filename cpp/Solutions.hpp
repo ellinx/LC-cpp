@@ -197,6 +197,7 @@ public:
     int numberOfArithmeticSlices(vector<int>& A);
     bool canPartition(vector<int>& nums);
     int findMaximumXOR(vector<int>& nums);
+    string originalDigits(string s);
 };
 
 
