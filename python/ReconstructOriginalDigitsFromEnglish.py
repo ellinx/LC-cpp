@@ -29,84 +29,95 @@ class ReconstructOriginalDigitsFromEnglish(object):
             letters[ord(each)-ord('a')] += 1
 
         #z,w,u,x,g identify unique digits
-        while letters[ord('z')-ord('a')]>0:
-            res += "0"
-            letters[ord('z')-ord('a')] -= 1
-            letters[ord('e')-ord('a')] -= 1
-            letters[ord('r')-ord('a')] -= 1
-            letters[ord('o')-ord('a')] -= 1
+        if letters[ord('z')-ord('a')]>0:
+            times = letters[ord('z') - ord('a')]
+            res += "0"*times
+            letters[ord('z')-ord('a')] -= times
+            letters[ord('e')-ord('a')] -= times
+            letters[ord('r')-ord('a')] -= times
+            letters[ord('o')-ord('a')] -= times
 
-        while letters[ord('w')-ord('a')]>0:
-            res += "2"
-            letters[ord('t')-ord('a')] -= 1
-            letters[ord('w')-ord('a')] -= 1
-            letters[ord('o')-ord('a')] -= 1
+        if letters[ord('w')-ord('a')]>0:
+            times = letters[ord('w') - ord('a')]
+            res += "2"*times
+            letters[ord('t')-ord('a')] -= times
+            letters[ord('w')-ord('a')] -= times
+            letters[ord('o')-ord('a')] -= times
 
-        while letters[ord('u')-ord('a')]>0:
-            res += "4"
-            letters[ord('f')-ord('a')] -= 1
-            letters[ord('o')-ord('a')] -= 1
-            letters[ord('u')-ord('a')] -= 1
-            letters[ord('r')-ord('a')] -= 1
+        if letters[ord('u')-ord('a')]>0:
+            times = letters[ord('u') - ord('a')]
+            res += "4"*times
+            letters[ord('f')-ord('a')] -= times
+            letters[ord('o')-ord('a')] -= times
+            letters[ord('u')-ord('a')] -= times
+            letters[ord('r')-ord('a')] -= times
 
-        while letters[ord('x')-ord('a')]>0:
-            res += "6"
-            letters[ord('s')-ord('a')] -= 1
-            letters[ord('i')-ord('a')] -= 1
-            letters[ord('x')-ord('a')] -= 1
+        if letters[ord('x')-ord('a')]>0:
+            times = letters[ord('x') - ord('a')]
+            res += "6"*times
+            letters[ord('s')-ord('a')] -= times
+            letters[ord('i')-ord('a')] -= times
+            letters[ord('x')-ord('a')] -= times
 
-        while letters[ord('g')-ord('a')]>0:
-            res += "8"
-            letters[ord('e')-ord('a')] -= 1
-            letters[ord('i')-ord('a')] -= 1
-            letters[ord('g')-ord('a')] -= 1
-            letters[ord('h')-ord('a')] -= 1
-            letters[ord('t')-ord('a')] -= 1
+        if letters[ord('g')-ord('a')]>0:
+            times = letters[ord('g') - ord('a')]
+            res += "8"*times
+            letters[ord('e')-ord('a')] -= times
+            letters[ord('i')-ord('a')] -= times
+            letters[ord('g')-ord('a')] -= times
+            letters[ord('h')-ord('a')] -= times
+            letters[ord('t')-ord('a')] -= times
 
 
         #now o,h,s identify unique digits
-        while letters[ord('o')-ord('a')]>0:
-            res += "1"
-            letters[ord('o')-ord('a')] -= 1
-            letters[ord('n')-ord('a')] -= 1
-            letters[ord('e')-ord('a')] -= 1
+        if letters[ord('o')-ord('a')]>0:
+            times = letters[ord('o') - ord('a')]
+            res += "1"*times
+            letters[ord('o')-ord('a')] -= times
+            letters[ord('n')-ord('a')] -= times
+            letters[ord('e')-ord('a')] -= times
 
-        while letters[ord('h')-ord('a')]>0:
-            res += "3"
-            letters[ord('t')-ord('a')] -= 1
-            letters[ord('h')-ord('a')] -= 1
-            letters[ord('r')-ord('a')] -= 1
-            letters[ord('e')-ord('a')] -= 1
-            letters[ord('e')-ord('a')] -= 1
+        if letters[ord('h')-ord('a')]>0:
+            times = letters[ord('h') - ord('a')]
+            res += "3"*times
+            letters[ord('t')-ord('a')] -= times
+            letters[ord('h')-ord('a')] -= times
+            letters[ord('r')-ord('a')] -= times
+            letters[ord('e')-ord('a')] -= times
+            letters[ord('e')-ord('a')] -= times
 
-        while letters[ord('s')-ord('a')]>0:
-            res += "7"
-            letters[ord('s')-ord('a')] -= 1
-            letters[ord('e')-ord('a')] -= 1
-            letters[ord('v')-ord('a')] -= 1
-            letters[ord('e')-ord('a')] -= 1
-            letters[ord('n')-ord('a')] -= 1
+        if letters[ord('s')-ord('a')]>0:
+            times = letters[ord('s') - ord('a')]
+            res += "7"*times
+            letters[ord('s')-ord('a')] -= times
+            letters[ord('e')-ord('a')] -= times
+            letters[ord('v')-ord('a')] -= times
+            letters[ord('e')-ord('a')] -= times
+            letters[ord('n')-ord('a')] -= times
 
 
         #f and n differentiate what's left
-        while letters[ord('f')-ord('a')]>0:
-            res += "5"
-            letters[ord('f')-ord('a')] -= 1
-            letters[ord('i')-ord('a')] -= 1
-            letters[ord('v')-ord('a')] -= 1
-            letters[ord('e')-ord('a')] -= 1
+        if letters[ord('f')-ord('a')]>0:
+            times = letters[ord('f') - ord('a')]
+            res += "5"*times
+            letters[ord('f')-ord('a')] -= times
+            letters[ord('i')-ord('a')] -= times
+            letters[ord('v')-ord('a')] -= times
+            letters[ord('e')-ord('a')] -= times
 
-        while letters[ord('n')-ord('a')]>0:
-            res += "9"
-            letters[ord('n')-ord('a')] -= 1
-            letters[ord('i')-ord('a')] -= 1
-            letters[ord('n')-ord('a')] -= 1
-            letters[ord('e')-ord('a')] -= 1
+        if letters[ord('n')-ord('a')]>0:
+            times = letters[ord('n') - ord('a')]
+            times >>= 1 #nine has two 'n'
+            res += "9"*times
+            letters[ord('n')-ord('a')] -= times
+            letters[ord('i')-ord('a')] -= times
+            letters[ord('n')-ord('a')] -= times
+            letters[ord('e')-ord('a')] -= times
 
         return "".join(sorted(res))
 
 
 #test
 tmp = ReconstructOriginalDigitsFromEnglish()
-result = tmp.originalDigits("fviefuro")
+result = tmp.originalDigits("nnie")
 print(result)

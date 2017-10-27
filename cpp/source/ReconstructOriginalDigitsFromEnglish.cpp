@@ -28,79 +28,109 @@ string Solutions::originalDigits(string s) {
     }
     
     //z,w,u,x,g identify unique digits
-    while (letters['z'-'a']>0) {
-        digits.push_back(0);
-        letters['z'-'a']--;
-        letters['e'-'a']--;
-        letters['r'-'a']--;
-        letters['o'-'a']--;
+    if (letters['z'-'a']>0) {
+        int times = letters['z'-'a'];
+        for (int i=0;i<times;i++)
+            digits.push_back(0);
+        
+        letters['z'-'a'] -= times;
+        letters['e'-'a'] -= times;
+        letters['r'-'a'] -= times;
+        letters['o'-'a'] -= times;
     }
-    while (letters['w'-'a']>0) {
-        digits.push_back(2);
-        letters['t'-'a']--;
-        letters['w'-'a']--;
-        letters['o'-'a']--;
+    if (letters['w'-'a']>0) {
+        int times = letters['w'-'a'];
+        for (int i=0;i<times;i++)
+            digits.push_back(2);
+        
+        letters['t'-'a'] -= times;
+        letters['w'-'a'] -= times;
+        letters['o'-'a'] -= times;
     }
-    while (letters['u'-'a']>0) {
-        digits.push_back(4);
-        letters['f'-'a']--;
-        letters['o'-'a']--;
-        letters['u'-'a']--;
-        letters['r'-'a']--;
+    if (letters['u'-'a']>0) {
+        int times = letters['u'-'a'];
+        for (int i=0;i<times;i++)
+            digits.push_back(4);
+        
+        letters['f'-'a'] -= times;
+        letters['o'-'a'] -= times;
+        letters['u'-'a'] -= times;
+        letters['r'-'a'] -= times;
     }
-    while (letters['x'-'a']>0) {
-        digits.push_back(6);
-        letters['s'-'a']--;
-        letters['i'-'a']--;
-        letters['x'-'a']--;
+    if (letters['x'-'a']>0) {
+        int times = letters['x'-'a'];
+        for (int i=0;i<times;i++)
+            digits.push_back(6);
+        
+        letters['s'-'a'] -= times;
+        letters['i'-'a'] -= times;
+        letters['x'-'a'] -= times;
     }
-    while (letters['g'-'a']>0) {
-        digits.push_back(8);
-        letters['e'-'a']--;
-        letters['i'-'a']--;
-        letters['g'-'a']--;
-        letters['h'-'a']--;
-        letters['t'-'a']--;
+    if (letters['g'-'a']>0) {
+        int times = letters['g'-'a'];
+        for (int i=0;i<times;i++)
+            digits.push_back(8);
+        
+        letters['e'-'a'] -= times;
+        letters['i'-'a'] -= times;
+        letters['g'-'a'] -= times;
+        letters['h'-'a'] -= times;
+        letters['t'-'a'] -= times;
     }
     
     //now o,h,s identify unique digits
-    while (letters['o'-'a']>0) {
-        digits.push_back(1);
-        letters['o'-'a']--;
-        letters['n'-'a']--;
-        letters['e'-'a']--;
+    if (letters['o'-'a']>0) {
+        int times = letters['o'-'a'];
+        for (int i=0;i<times;i++)
+            digits.push_back(1);
+        
+        letters['o'-'a'] -= times;
+        letters['n'-'a'] -= times;
+        letters['e'-'a'] -= times;
     }
-    while (letters['h'-'a']>0) {
-        digits.push_back(3);
-        letters['t'-'a']--;
-        letters['h'-'a']--;
-        letters['r'-'a']--;
-        letters['e'-'a']--;
-        letters['e'-'a']--;
+    if (letters['h'-'a']>0) {
+        int times = letters['h'-'a'];
+        for (int i=0;i<times;i++)
+            digits.push_back(3);
+        
+        letters['t'-'a'] -= times;
+        letters['h'-'a'] -= times;
+        letters['r'-'a'] -= times;
+        letters['e'-'a'] -= times;
+        letters['e'-'a'] -= times;
     }
-    while (letters['s'-'a']>0) {
-        digits.push_back(7);
-        letters['s'-'a']--;
-        letters['e'-'a']--;
-        letters['v'-'a']--;
-        letters['e'-'a']--;
-        letters['n'-'a']--;
+    if (letters['s'-'a']>0) {
+        int times = letters['s'-'a'];
+        for (int i=0;i<times;i++)
+            digits.push_back(7);
+        letters['s'-'a'] -= times;
+        letters['e'-'a'] -= times;
+        letters['v'-'a'] -= times;
+        letters['e'-'a'] -= times;
+        letters['n'-'a'] -= times;
     }
     
     //f and n differentiate what's left
-    while (letters['f'-'a']>0) {
-        digits.push_back(5);
-        letters['f'-'a']--;
-        letters['i'-'a']--;
-        letters['v'-'a']--;
-        letters['e'-'a']--;
+    if (letters['f'-'a']>0) {
+        int times = letters['f'-'a'];
+        for (int i=0;i<times;i++)
+            digits.push_back(5);
+        
+        letters['f'-'a'] -= times;
+        letters['i'-'a'] -= times;
+        letters['v'-'a'] -= times;
+        letters['e'-'a'] -= times;
     }
-    while (letters['n'-'a']>0) {
-        digits.push_back(9);
-        letters['n'-'a']--;
-        letters['i'-'a']--;
-        letters['n'-'a']--;
-        letters['e'-'a']--;
+    if (letters['n'-'a']>0) {
+        int times = letters['n'-'a'];
+        times >>= 1;//nine has two 'n'
+        for (int i=0;i<times;i++)
+            digits.push_back(9);
+        
+        letters['n'-'a'] -= times;
+        letters['i'-'a'] -= times;
+        letters['n'-'a'] -= times;
+        letters['e'-'a'] -= times;
     }
     
     sort(digits.begin(),digits.end());

@@ -37,7 +37,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.originalDigits("ereth");
+    auto result = dummy.originalDigits("nnei");
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
