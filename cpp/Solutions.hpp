@@ -198,6 +198,7 @@ public:
     bool canPartition(vector<int>& nums);
     int findMaximumXOR(vector<int>& nums);
     string originalDigits(string s);
+    int characterReplacement(string s, int k);
 };
 
 

@@ -37,7 +37,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.originalDigits("nnei");
+    auto result = dummy.characterReplacement("A", 1);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
