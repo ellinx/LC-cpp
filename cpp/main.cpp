@@ -10,7 +10,7 @@ int main() {
     vector<int> vec_int2 = {1,2,3};
     vector<string> vec_string = {"OOOOOOOOXOOOOOXOOOOO","OOOOOOOXOOOOOOOOOOOO","XOOXOXOOOOXOOXOOOOOO","OOOOOOOOOOOOOOOOOXXO","OXXOOOOOOXOOOOOOOOOO","OOOOXOOOOOOXOOOOOXXO","OOOOOOOXOOOOOOOOOOOO","OOOOOOOOOOOOOXOOOOOO","OOOOOOOOOOOOOOOOOOXO","OOOOOXOOOOOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","OOOOXOOOOXOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","XOOOOOOOOXXOOOOOOOOO","OOOOOOOOOOOXOOOOOOOO","OOOOXOOOOOOOOXOOOOOX","OOOOOXOOOOOOOOOXOXOO","OXOOOOOOOOOOOOOOOOOO","OOOOOOOOXXOOOXOOXOOX","OOOOOOOOOOOOOOOOOOOO"};
     vector<pair<int,int>> vec_pair_int_int = {{7,0}};
-    vector<Interval> vec_interval = {Interval(0,70),Interval(5,40),Interval(20,50),Interval(50,60)};
+    vector<Interval> vec_interval = {Interval(1,2),Interval(2,3),Interval(3,4),Interval(1,3)};
     vector<vector<int>> matrix_int = {
                             {12,13,1,12},
                             {13,4,13,12},
@@ -37,7 +37,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.characterReplacement("A", 1);
+    auto result = dummy.eraseOverlapIntervals(vec_interval);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
