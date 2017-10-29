@@ -18,6 +18,7 @@ Output: false
 Explanation: The array cannot be partitioned into equal sum subsets.
 """
 
+
 class PartitionEqualSubsetSum(object):
     def canPartition(self, nums):
         """
@@ -44,7 +45,8 @@ class PartitionEqualSubsetSum(object):
 
         return dp[n][s]
 
-#test
+
+# test
 tmp = PartitionEqualSubsetSum()
 nums = [1, 5, 2]
 result = tmp.canPartition(nums)

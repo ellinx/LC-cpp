@@ -15,6 +15,7 @@ Input: "fviefuro"
 Output: "45"
 """
 
+
 class ReconstructOriginalDigitsFromEnglish(object):
     def originalDigits(self, s):
         """
@@ -28,7 +29,7 @@ class ReconstructOriginalDigitsFromEnglish(object):
         for each in s:
             letters[ord(each)-ord('a')] += 1
 
-        #z,w,u,x,g identify unique digits
+        # z,w,u,x,g identify unique digits
         if letters[ord('z')-ord('a')]>0:
             times = letters[ord('z') - ord('a')]
             res += "0"*times
@@ -68,8 +69,7 @@ class ReconstructOriginalDigitsFromEnglish(object):
             letters[ord('h')-ord('a')] -= times
             letters[ord('t')-ord('a')] -= times
 
-
-        #now o,h,s identify unique digits
+        # now o,h,s identify unique digits
         if letters[ord('o')-ord('a')]>0:
             times = letters[ord('o') - ord('a')]
             res += "1"*times
@@ -95,8 +95,7 @@ class ReconstructOriginalDigitsFromEnglish(object):
             letters[ord('e')-ord('a')] -= times
             letters[ord('n')-ord('a')] -= times
 
-
-        #f and n differentiate what's left
+        # f and n differentiate what's left
         if letters[ord('f')-ord('a')]>0:
             times = letters[ord('f') - ord('a')]
             res += "5"*times
@@ -107,7 +106,7 @@ class ReconstructOriginalDigitsFromEnglish(object):
 
         if letters[ord('n')-ord('a')]>0:
             times = letters[ord('n') - ord('a')]
-            times >>= 1 #nine has two 'n'
+            times >>= 1 # nine has two 'n'
             res += "9"*times
             letters[ord('n')-ord('a')] -= times
             letters[ord('i')-ord('a')] -= times
@@ -117,7 +116,7 @@ class ReconstructOriginalDigitsFromEnglish(object):
         return "".join(sorted(res))
 
 
-#test
+# test
 tmp = ReconstructOriginalDigitsFromEnglish()
 result = tmp.originalDigits("nnie")
 print(result)

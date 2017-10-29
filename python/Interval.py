@@ -4,8 +4,8 @@ class Interval:
         self.end = e
 
     def __str__(self):
-        return ("[" + str(self.start) + "," + str(self.end) + "]")
+        return "[" + str(self.start) + "," + str(self.end) + "]"
 
-    #used for print
+    # used for print
     def __repr__(self):
         return self.__str__()

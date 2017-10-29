@@ -57,7 +57,8 @@ class LongestRepeatingCharacterReplacement:
 
         return res
 
-#test
+
+# test
 tmp = LongestRepeatingCharacterReplacement()
 result = tmp.characterReplacement("AABABBA",1)
 print(result)

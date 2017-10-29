@@ -13,6 +13,7 @@ Output:
 [[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]
 """
 
+
 class QueueReconstructionByHeight(object):
     def reconstructQueue(self, people):
         """
@@ -21,7 +22,7 @@ class QueueReconstructionByHeight(object):
         """
 
         if len(people)==0:
-            return [];
+            return []
 
         people.sort(key=lambda hk: (-hk[0], hk[1]))
 
@@ -32,7 +33,7 @@ class QueueReconstructionByHeight(object):
         return res
 
 
-#test
+# test
 tmp = QueueReconstructionByHeight()
 people = [[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]
 result = tmp.reconstructQueue(people)

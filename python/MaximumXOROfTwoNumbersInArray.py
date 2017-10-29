@@ -14,6 +14,7 @@ Output: 28
 Explanation: The maximum result is 5 ^ 25 = 28.
 """
 
+
 class MaximumXOROfTwoNumbersInArray(object):
     def findMaximumXOR(self, nums):
         """
@@ -37,7 +38,7 @@ class MaximumXOROfTwoNumbersInArray(object):
         return res
 
 
-#test
+# test
 tmp = MaximumXOROfTwoNumbersInArray()
 nums = [3, 10, 5, 25, 2, 8]
 result = tmp.findMaximumXOR(nums)

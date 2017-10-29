@@ -33,6 +33,7 @@ Explanation: You don't need to remove any of the intervals since they're already
 
 from Interval import *
 
+
 class NonoverlappingIntervals:
     def eraseOverlapIntervals(self, intervals):
         """
@@ -45,7 +46,7 @@ class NonoverlappingIntervals:
 
         noOverlapping = 0
         intervals.sort(key=lambda interval : interval.end)
-        #print(intervals)
+        # print(intervals)
         cur = intervals[0]
         noOverlapping += 1;
         for i in range(1,len(intervals)):
@@ -55,7 +56,8 @@ class NonoverlappingIntervals:
 
         return len(intervals)-noOverlapping
 
-#test
+
+# test
 tmp = NonoverlappingIntervals()
 intervals = [
     Interval(1,2),
