@@ -10,7 +10,11 @@ int main() {
     vector<int> vec_int2 = {1,2,3};
     vector<string> vec_string = {"OOOOOOOOXOOOOOXOOOOO","OOOOOOOXOOOOOOOOOOOO","XOOXOXOOOOXOOXOOOOOO","OOOOOOOOOOOOOOOOOXXO","OXXOOOOOOXOOOOOOOOOO","OOOOXOOOOOOXOOOOOXXO","OOOOOOOXOOOOOOOOOOOO","OOOOOOOOOOOOOXOOOOOO","OOOOOOOOOOOOOOOOOOXO","OOOOOXOOOOOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","OOOOXOOOOXOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","XOOOOOOOOXXOOOOOOOOO","OOOOOOOOOOOXOOOOOOOO","OOOOXOOOOOOOOXOOOOOX","OOOOOXOOOOOOOOOXOXOO","OXOOOOOOOOOOOOOOOOOO","OOOOOOOOXXOOOXOOXOOX","OOOOOOOOOOOOOOOOOOOO"};
     vector<pair<int,int>> vec_pair_int_int = {{7,0}};
-    vector<Interval> vec_interval = {Interval(1,2),Interval(2,3),Interval(3,4),Interval(1,3)};
+    vector<Interval> vec_interval = {
+        Interval(3,4),
+        Interval(2,3),
+        Interval(1,2)
+    };
     vector<vector<int>> matrix_int = {
                             {12,13,1,12},
                             {13,4,13,12},
@@ -37,7 +41,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.eraseOverlapIntervals(vec_interval);
+    auto result = dummy.findRightInterval(vec_interval);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

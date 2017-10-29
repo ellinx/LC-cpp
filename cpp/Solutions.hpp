@@ -200,6 +200,7 @@ public:
     string originalDigits(string s);
     int characterReplacement(string s, int k);
     int eraseOverlapIntervals(vector<Interval>& intervals);
+    vector<int> findRightInterval(vector<Interval>& intervals);
 };
 
 

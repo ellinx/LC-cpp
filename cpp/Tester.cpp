@@ -47,6 +47,10 @@ void Tester::print(string s) {
     cout<<s<<endl;
 }
 
+void Tester::print(Interval& interval) {
+    cout<<"["<<interval.start<<","<<interval.end<<"]";
+}
+
 void Tester::print(vector<int>& vec){
     cout<<"[";
     for (int i=0;i<vec.size();i++) {

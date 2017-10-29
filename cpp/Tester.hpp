@@ -23,6 +23,7 @@ public:
     static void print(long long n);
     static void print(string s);
     static void print(ListNode* head);
+    static void print(Interval& interval);
     
     static void print(vector<int>& vec);
     static void print(vector<string>& vec);
@@ -31,7 +32,7 @@ public:
     static void print(vector<TreeNode*>& vec);
     static void print(vector<pair<int,int>>& vec);
     static void print(vector<pair<string,int>>& vec);
-    static void print(vector<Interval> & vec);
+    static void print(vector<Interval>& vec);
     
     static void print(vector<vector<int>>& matrix);
     static void print(vector<vector<char>>& matrix);
