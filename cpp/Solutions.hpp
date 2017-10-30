@@ -201,6 +201,7 @@ public:
     int characterReplacement(string s, int k);
     int eraseOverlapIntervals(vector<Interval>& intervals);
     vector<int> findRightInterval(vector<Interval>& intervals);
+    vector<int> findDuplicates(vector<int>& nums);
 };
 
 
