@@ -41,7 +41,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.findDuplicates(vec_int);
+    auto result = dummy.frequencySort("tree");
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

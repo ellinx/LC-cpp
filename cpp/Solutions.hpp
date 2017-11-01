@@ -202,6 +202,7 @@ public:
     int eraseOverlapIntervals(vector<Interval>& intervals);
     vector<int> findRightInterval(vector<Interval>& intervals);
     vector<int> findDuplicates(vector<int>& nums);
+    string frequencySort(string s);
 };
 
 
