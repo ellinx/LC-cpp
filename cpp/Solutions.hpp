@@ -203,6 +203,7 @@ public:
     vector<int> findRightInterval(vector<Interval>& intervals);
     vector<int> findDuplicates(vector<int>& nums);
     string frequencySort(string s);
+    int findMinArrowShots(vector<pair<int, int>>& points);
 };
 
 

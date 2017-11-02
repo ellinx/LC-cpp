@@ -9,7 +9,7 @@ int main() {
     vector<int> vec_int = {4,3,2,7,8,2,3,1};
     vector<int> vec_int2 = {1,2,3};
     vector<string> vec_string = {"OOOOOOOOXOOOOOXOOOOO","OOOOOOOXOOOOOOOOOOOO","XOOXOXOOOOXOOXOOOOOO","OOOOOOOOOOOOOOOOOXXO","OXXOOOOOOXOOOOOOOOOO","OOOOXOOOOOOXOOOOOXXO","OOOOOOOXOOOOOOOOOOOO","OOOOOOOOOOOOOXOOOOOO","OOOOOOOOOOOOOOOOOOXO","OOOOOXOOOOOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","OOOOXOOOOXOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","XOOOOOOOOXXOOOOOOOOO","OOOOOOOOOOOXOOOOOOOO","OOOOXOOOOOOOOXOOOOOX","OOOOOXOOOOOOOOOXOXOO","OXOOOOOOOOOOOOOOOOOO","OOOOOOOOXXOOOXOOXOOX","OOOOOOOOOOOOOOOOOOOO"};
-    vector<pair<int,int>> vec_pair_int_int = {{7,0}};
+    vector<pair<int,int>> vec_pair_int_int = {{10,16}, {2,8}, {1,6}, {7,12}};
     vector<Interval> vec_interval = {
         Interval(3,4),
         Interval(2,3),
@@ -41,7 +41,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.frequencySort("tree");
+    auto result = dummy.findMinArrowShots(vec_pair_int_int);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
