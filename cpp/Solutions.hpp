@@ -204,6 +204,7 @@ public:
     vector<int> findDuplicates(vector<int>& nums);
     string frequencySort(string s);
     int findMinArrowShots(vector<pair<int, int>>& points);
+    vector<vector<int>> fourSum(vector<int>& nums, int target);
 };
 
 

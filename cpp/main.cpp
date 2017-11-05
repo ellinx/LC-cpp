@@ -6,7 +6,7 @@ int main() {
     Solutions dummy;
 
     //inputs
-    vector<int> vec_int = {4,3,2,7,8,2,3,1};
+    vector<int> vec_int = {-3,-2,-1,0,0,1,2,3};
     vector<int> vec_int2 = {1,2,3};
     vector<string> vec_string = {"OOOOOOOOXOOOOOXOOOOO","OOOOOOOXOOOOOOOOOOOO","XOOXOXOOOOXOOXOOOOOO","OOOOOOOOOOOOOOOOOXXO","OXXOOOOOOXOOOOOOOOOO","OOOOXOOOOOOXOOOOOXXO","OOOOOOOXOOOOOOOOOOOO","OOOOOOOOOOOOOXOOOOOO","OOOOOOOOOOOOOOOOOOXO","OOOOOXOOOOOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","OOOOXOOOOXOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","XOOOOOOOOXXOOOOOOOOO","OOOOOOOOOOOXOOOOOOOO","OOOOXOOOOOOOOXOOOOOX","OOOOOXOOOOOOOOOXOXOO","OXOOOOOOOOOOOOOOOOOO","OOOOOOOOXXOOOXOOXOOX","OOOOOOOOOOOOOOOOOOOO"};
     vector<pair<int,int>> vec_pair_int_int = {{10,16}, {2,8}, {1,6}, {7,12}};
@@ -41,7 +41,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.findMinArrowShots(vec_pair_int_int);
+    auto result = dummy.fourSum(vec_int, 0);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
