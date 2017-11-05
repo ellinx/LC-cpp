@@ -77,3 +77,29 @@ vector<vector<int>> Solutions::fourSum(vector<int>& nums, int target) {
  1. (0, 0, 0, 1) -> A[0] + B[0] + C[0] + D[1] = 1 + (-2) + (-1) + 2 = 0
  2. (1, 1, 0, 0) -> A[1] + B[1] + C[0] + D[0] = 2 + (-1) + (-1) + 0 = 0
  */
+
+int Solutions::fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D) {
+    unordered_map<int, int> mp;
+    int res = 0;
+    
+    for (int a : A) {
+        for (int b : B) {
+            int sum = a+b;
+            if (mp.find(sum)==mp.end()) {
+                mp[sum] = 1;
+            } else {
+                mp[sum]++;
+            }
+        }
+    }
+    
+    for (int c : C) {
+        for (int d : D) {
+            int sum = c+d;
+            if (mp.find(-sum)!=mp.end()) {
+                res += mp[-sum];
+            }
+        }
+    }
+    return res;
+}
