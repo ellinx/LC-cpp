@@ -6,7 +6,7 @@ int main() {
     Solutions dummy;
 
     //inputs
-    vector<int> vec_int = {1,2};
+    vector<int> vec_int = {1,2,3};
     vector<int> vec_int1 = {-2,-1};
     vector<int> vec_int2 = {-1,2};
     vector<int> vec_int3 = {0,2};
@@ -43,7 +43,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.fourSumCount(vec_int, vec_int1, vec_int2, vec_int3);
+    auto result = dummy.minMoves2(vec_int);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

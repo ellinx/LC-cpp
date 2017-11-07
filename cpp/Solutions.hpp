@@ -206,6 +206,8 @@ public:
     int findMinArrowShots(vector<pair<int, int>>& points);
     vector<vector<int>> fourSum(vector<int>& nums, int target);
     int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D);
+    int minMoves(vector<int>& nums);
+    int minMoves2(vector<int>& nums);
 };
 
 
