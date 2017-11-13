@@ -33,6 +33,55 @@ vector<vector<char>> Tester::initMatrixChar(vector<string>& vec) {
     return res;
 }
 
+TreeNode* initBSTIntHelper(vector<int>& vec, int start, int end) {
+    TreeNode* root = new TreeNode(vec[start]);
+    if (end==start) return root;
+    int leftStart = -1;
+    int leftEnd = -1;
+    int rightStart = -1;
+    int rightEnd = -1;
+    
+    if (vec[start+1]<vec[start]) {
+        //left sub tree after root node
+        leftStart = start+1;
+        for (int i=start+2;i<=end;i++) {
+            if (vec[i]>vec[start]) {
+                leftEnd = i-1;
+                rightStart = i;
+                rightEnd = end;
+                break;
+            }
+        }
+        if (rightStart==-1) {
+            leftEnd = end;
+        }
+    } else {
+        //right sub tree after root node
+        rightStart = start+1;
+        for (int i=start+2;i<=end;i++) {
+            if (vec[i]<vec[start]) {
+                rightEnd = i-1;
+                leftStart = i;
+                leftEnd = end;
+                break;
+            }
+        }
+        if (leftStart == -1) {
+            rightEnd = end;
+        }
+    }
+    cout<<"leftStart="<<leftStart<<",leftEnd="<<leftEnd<<endl;
+    cout<<"rightStart="<<rightStart<<",rightEnd="<<rightEnd<<endl;
+    root->left = (leftStart==-1)?NULL:initBSTIntHelper(vec, leftStart, leftEnd);
+    root->right = (rightStart==-1)?NULL:initBSTIntHelper(vec, rightStart, rightEnd);
+    
+    return root;
+}
+//input is like [root,leftNodes, rightNodes] or [root, rightNodes, leftNodes]
+TreeNode* Tester::initBSTInt(vector<int> vec) {
+    return initBSTIntHelper(vec, 0, vec.size()-1);
+}
+
 
 //print functions
 void Tester::print(int n){
@@ -199,14 +248,16 @@ void Tester::print(TreeNode* root) {
                 levelStr.push_back("#");
                 continue;
             }
-            
+            levelStr.push_back(to_string(levelTN[i]->val));
             nextLevel.push_back(levelTN[i]->left);
             nextLevel.push_back(levelTN[i]->right);
         }
         levelOrder.push_back(levelStr);
         levelTN = nextLevel;
     }
-    Tester::print(levelOrder);
+    
+    for (auto each : levelOrder)
+        Tester::print(each);
     
     cout<<"]"<<endl;
 }

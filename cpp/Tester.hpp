@@ -18,6 +18,7 @@ class Tester {
 public:
     static ListNode* initListInt(vector<int> vec);
     static vector<vector<char>> initMatrixChar(vector<string>& vec);
+    static TreeNode* initBSTInt(vector<int> vec);
     
     static void print(int n);
     static void print(long long n);
