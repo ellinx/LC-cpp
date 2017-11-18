@@ -46,8 +46,8 @@ class PartitionEqualSubsetSum(object):
         return dp[n][s]
 
 
-# test
-tmp = PartitionEqualSubsetSum()
-nums = [1, 5, 2]
-result = tmp.canPartition(nums)
-print(result)
+if __name__=="__main__":
+    tmp = PartitionEqualSubsetSum()
+    nums = [1, 5, 2]
+    result = tmp.canPartition(nums)
+    print(result)

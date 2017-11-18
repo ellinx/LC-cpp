@@ -86,11 +86,12 @@ class FindRightInterval:
 
 
 # test
-tmp = FindRightInterval()
-intervals = [
-    Interval(2,4),
-    Interval(2,3),
-    Interval(1,2)
-]
-result = tmp.findRightInterval(intervals)
-print(result)
+if __name__=="__main__":
+    tmp = FindRightInterval()
+    intervals = [
+        Interval(2,4),
+        Interval(2,3),
+        Interval(1,2)
+    ]
+    result = tmp.findRightInterval(intervals)
+    print(result)

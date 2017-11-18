@@ -117,6 +117,7 @@ class ReconstructOriginalDigitsFromEnglish(object):
 
 
 # test
-tmp = ReconstructOriginalDigitsFromEnglish()
-result = tmp.originalDigits("nnie")
-print(result)
+if __name__=="__main__":
+    tmp = ReconstructOriginalDigitsFromEnglish()
+    result = tmp.originalDigits("nnie")
+    print(result)

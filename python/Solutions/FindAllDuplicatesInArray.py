@@ -38,7 +38,8 @@ class FindAllDuplicatesInArray:
 
 
 # test
-tmp = FindAllDuplicatesInArray()
-nums = [4,3,2,7,8,2,3,1]
-result = tmp.findDuplicates(nums)
-print(result)
+if __name__=="__main__":
+    tmp = FindAllDuplicatesInArray()
+    nums = [4,3,2,7,8,2,3,1]
+    result = tmp.findDuplicates(nums)
+    print(result)

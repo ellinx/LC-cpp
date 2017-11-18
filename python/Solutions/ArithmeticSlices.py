@@ -70,7 +70,8 @@ class ArithmeticSlices(object):
 
 
 #test
-tmp = ArithmeticSlices()
-A = [1,2,3,4]
-result = tmp.numberOfArithmeticSlices(A)
-print(result)
+if __name__=="__main__":
+    tmp = ArithmeticSlices()
+    A = [1,2,3,4]
+    result = tmp.numberOfArithmeticSlices(A)
+    print(result)

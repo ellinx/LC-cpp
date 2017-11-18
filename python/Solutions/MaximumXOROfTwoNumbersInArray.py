@@ -39,7 +39,8 @@ class MaximumXOROfTwoNumbersInArray(object):
 
 
 # test
-tmp = MaximumXOROfTwoNumbersInArray()
-nums = [3, 10, 5, 25, 2, 8]
-result = tmp.findMaximumXOR(nums)
-print(result)
+if __name__=="__main__":
+    tmp = MaximumXOROfTwoNumbersInArray()
+    nums = [3, 10, 5, 25, 2, 8]
+    result = tmp.findMaximumXOR(nums)
+    print(result)

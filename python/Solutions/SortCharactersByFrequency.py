@@ -61,6 +61,7 @@ class SortCharactersByFrequency:
 
 
 # test
-tmp = SortCharactersByFrequency()
-result = tmp.frequencySort("Aabb")
-print(result)
+if __name__=="__main__":
+    tmp = SortCharactersByFrequency()
+    result = tmp.frequencySort("Aabb")
+    print(result)

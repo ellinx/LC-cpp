@@ -45,7 +45,8 @@ class MinimumNumberOfArrowsToBurstBalloons:
 
 
 # test
-tmp = MinimumNumberOfArrowsToBurstBalloons()
-points = [[10,16], [2,8], [1,6], [7,12]]
-result = tmp.findMinArrowShots(points)
-print(result)
+if __name__=="__main__":
+    tmp = MinimumNumberOfArrowsToBurstBalloons()
+    points = [[10,16], [2,8], [1,6], [7,12]]
+    result = tmp.findMinArrowShots(points)
+    print(result)

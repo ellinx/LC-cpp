@@ -34,7 +34,8 @@ class QueueReconstructionByHeight(object):
 
 
 # test
-tmp = QueueReconstructionByHeight()
-people = [[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]
-result = tmp.reconstructQueue(people)
-print(result)
+if __name__=="__main__":
+    tmp = QueueReconstructionByHeight()
+    people = [[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]
+    result = tmp.reconstructQueue(people)
+    print(result)

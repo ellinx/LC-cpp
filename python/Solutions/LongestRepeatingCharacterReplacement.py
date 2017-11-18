@@ -59,6 +59,7 @@ class LongestRepeatingCharacterReplacement:
 
 
 # test
-tmp = LongestRepeatingCharacterReplacement()
-result = tmp.characterReplacement("AABABBA",1)
-print(result)
+if __name__=="__main__":
+    tmp = LongestRepeatingCharacterReplacement()
+    result = tmp.characterReplacement("AABABBA",1)
+    print(result)

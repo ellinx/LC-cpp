@@ -118,15 +118,16 @@ class FourSum:
 
 
 # test
-tmp = FourSum()
-nums = [1, 0, -1, 0, -2, 2]
-result1 = tmp.fourSum(nums,0)
-for each in result1:
-    print(each)
+if __name__=="__main__":
+    tmp = FourSum()
+    nums = [1, 0, -1, 0, -2, 2]
+    result1 = tmp.fourSum(nums,0)
+    for each in result1:
+        print(each)
 
-A = [ 1, 2]
-B = [-2,-1]
-C = [-1, 2]
-D = [ 0, 2]
-result2 = tmp.fourSumCount(A,B,C,D)
-print(result2)
+    A = [ 1, 2]
+    B = [-2,-1]
+    C = [-1, 2]
+    D = [ 0, 2]
+    result2 = tmp.fourSumCount(A,B,C,D)
+    print(result2)

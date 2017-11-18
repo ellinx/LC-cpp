@@ -66,7 +66,8 @@ class MinimumMovesToEqualArrayElements:
 
 
 # test
-tmp = MinimumMovesToEqualArrayElements()
-nums = [1,2,3]
-result = tmp.minMoves2(nums)
-print(result)
+if __name__=="__main__":
+    tmp = MinimumMovesToEqualArrayElements()
+    nums = [1,2,3]
+    result = tmp.minMoves2(nums)
+    print(result)

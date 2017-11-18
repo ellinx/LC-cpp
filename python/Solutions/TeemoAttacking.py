@@ -54,7 +54,8 @@ class TeemoAttacking(object):
 
 
 # test
-tmp = TeemoAttacking()
-timeSeries = [1,2]
-result = tmp.findPoisonedDuration(timeSeries, 2)
-print(result)
+if __name__=="__main__":
+    tmp = TeemoAttacking()
+    timeSeries = [1,2]
+    result = tmp.findPoisonedDuration(timeSeries, 2)
+    print(result)

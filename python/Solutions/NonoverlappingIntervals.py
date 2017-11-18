@@ -58,12 +58,13 @@ class NonoverlappingIntervals:
 
 
 # test
-tmp = NonoverlappingIntervals()
-intervals = [
-    Interval(1,2),
-    Interval(2,3),
-    Interval(3,4),
-    Interval(1,3)
-]
-result = tmp.eraseOverlapIntervals(intervals)
-print(result)
+if __name__=="__main__":
+    tmp = NonoverlappingIntervals()
+    intervals = [
+        Interval(1,2),
+        Interval(2,3),
+        Interval(3,4),
+        Interval(1,3)
+    ]
+    result = tmp.eraseOverlapIntervals(intervals)
+    print(result)
