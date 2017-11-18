@@ -208,6 +208,7 @@ public:
     int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D);
     int minMoves(vector<int>& nums);
     int minMoves2(vector<int>& nums);
+    vector<int> findAnagrams(string s, string p);
 };
 
 
