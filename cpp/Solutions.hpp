@@ -209,6 +209,7 @@ public:
     int minMoves(vector<int>& nums);
     int minMoves2(vector<int>& nums);
     vector<int> findAnagrams(string s, string p);
+    ListNode* removeElements(ListNode* head, int val);
 };
 
 

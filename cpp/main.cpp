@@ -34,7 +34,7 @@ int main() {
                             {'O','X','O','X','O','X'}
                         };
     
-    ListNode* list_int = Tester::initListInt(vector<int>{1, 5, 3, 4, 9, 2});
+    ListNode* list_int = Tester::initListInt(vector<int>{1, 2, 6, 3, 4, 5, 6});
     ListNode* list_int2 = Tester::initListInt(vector<int>{5, 6, 4});
     
     
@@ -43,7 +43,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.findAnagrams("afdkljflsdkjfsdlkjfdslkjfdslkjfkljlkjlkfdjslkfjsdlkjsdflksdjflkdsjfldskjksldfjlksdjflkdsjfsjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjfsdfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","z");
+    auto result = dummy.removeElements(list_int,6);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
