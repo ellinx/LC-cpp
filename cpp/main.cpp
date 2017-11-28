@@ -1,5 +1,6 @@
 #include "Solutions.hpp"
 #include "Tester.hpp"
+#include <thread>
 
 
 int main() {
@@ -43,7 +44,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.removeElements(list_int,6);
+    auto result = dummy.isHappy(19);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;
