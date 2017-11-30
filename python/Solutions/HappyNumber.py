@@ -36,6 +36,7 @@ class HappyNumber:
 
 
 # test
-tmp = HappyNumber()
-result = tmp.isHappy(19)
-print(result)
+if __name__ == "__main__":
+    tmp = HappyNumber()
+    result = tmp.isHappy(19)
+    print(result)

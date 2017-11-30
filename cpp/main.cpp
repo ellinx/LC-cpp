@@ -11,7 +11,7 @@ int main() {
     vector<int> vec_int1 = {-2,-1};
     vector<int> vec_int2 = {-1,2};
     vector<int> vec_int3 = {0,2};
-    vector<string> vec_string = {"OOOOOOOOXOOOOOXOOOOO","OOOOOOOXOOOOOOOOOOOO","XOOXOXOOOOXOOXOOOOOO","OOOOOOOOOOOOOOOOOXXO","OXXOOOOOOXOOOOOOOOOO","OOOOXOOOOOOXOOOOOXXO","OOOOOOOXOOOOOOOOOOOO","OOOOOOOOOOOOOXOOOOOO","OOOOOOOOOOOOOOOOOOXO","OOOOOXOOOOOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","OOOOXOOOOXOOOOOOOOOO","OOOOOOOOXOOOOOOOOOOO","XOOOOOOOOXXOOOOOOOOO","OOOOOOOOOOOXOOOOOOOO","OOOOXOOOOOOOOXOOOOOX","OOOOOXOOOOOOOOOXOXOO","OXOOOOOOOOOOOOOOOOOO","OOOOOOOOXXOOOXOOXOOX","OOOOOOOOOOOOOOOOOOOO"};
+    vector<string> vec_string = {"4", "13", "5", "/", "+"};
     vector<pair<int,int>> vec_pair_int_int = {{10,16}, {2,8}, {1,6}, {7,12}};
     vector<Interval> vec_interval = {
         Interval(3,4),
@@ -44,7 +44,7 @@ int main() {
     cout<<endl;
 
     //test code
-    auto result = dummy.isHappy(19);
+    auto result = dummy.evalRPN(vec_string);
     //dummy.reorderList(list_int);
     
     cout<<"################################################"<<endl;

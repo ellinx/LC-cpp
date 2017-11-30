@@ -211,6 +211,7 @@ public:
     vector<int> findAnagrams(string s, string p);
     ListNode* removeElements(ListNode* head, int val);
     bool isHappy(int n);
+    int evalRPN(vector<string>& tokens);
 };
 
 
