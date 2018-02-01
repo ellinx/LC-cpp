@@ -66,7 +66,7 @@ public class GroupAnagrams {
 		for (List<String> list:result) {
 			System.out.print("[");
 			for (String str:list) {
-				System.out.print(str+",");
+				System.out.println(str+",");
 			}
 			System.out.println("]");
 		}

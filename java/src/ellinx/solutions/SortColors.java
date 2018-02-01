@@ -1,5 +1,7 @@
 package ellinx.solutions;
 
+import java.util.Arrays;
+
 /**
  * Given an array with n objects colored red, white or blue, sort them so that
  * objects of the same color are adjacent, with the colors in the order red,
@@ -46,8 +48,6 @@ public class SortColors {
 		SortColors sc = new SortColors();
 		int[] nums = {1,0,2,2,0,1};
 		sc.sortColors(nums);
-		for (int num:nums) {
-			System.out.println(num);
-		}
+		System.out.println(Arrays.toString(nums));
 	}
 }

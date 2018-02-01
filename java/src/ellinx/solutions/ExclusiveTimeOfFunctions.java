@@ -1,6 +1,7 @@
 package ellinx.solutions;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
@@ -82,8 +83,6 @@ public class ExclusiveTimeOfFunctions {
 		logs.add("1:end:5");
 		logs.add("0:end:6");
 		int[] result = etf.exclusiveTime(2, logs);
-		for (int each:result) {
-			System.out.println(each);
-		}
+		System.out.println(Arrays.toString(result));
 	}
 }

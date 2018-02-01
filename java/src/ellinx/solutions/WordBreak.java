@@ -26,7 +26,6 @@ public class WordBreak {
 		int[] dp = new int[s.length()+1];
         Set<String> wordSet = new HashSet<>();
         //initialize dp array
-        Arrays.fill(dp,0);
         dp[0] = 1;
         //initialize word set
         for (String word : wordDict) {
