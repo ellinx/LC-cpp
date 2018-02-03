@@ -87,11 +87,6 @@ public class ValidateBST {
 	
 	//test
 	public static void main(String[] args) {
-		ValidateBST vbst = new ValidateBST();
-		Integer[] nums = {2,1,3};
-		BinaryTree bt = new BinaryTree(nums);
-		bt.print();
-		boolean result = vbst.isValidBST2(bt.getRoot());
-		System.out.println(result);
+
 	}
 }
