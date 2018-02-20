@@ -32,6 +32,9 @@ import java.util.PriorityQueue;
  *
  */
 public class SmallestRange {
+	/*
+	 * merge sort and then window sliding
+	 */
 	public int[] smallestRange(List<List<Integer>> nums) {
         int[] res = {-100000, 100000};
         PriorityQueue<List<Integer>> minHeap = new PriorityQueue<>(new Comparator<List<Integer>>(){
@@ -103,8 +106,8 @@ public class SmallestRange {
 		SmallestRange sr = new SmallestRange();
 		List<List<Integer>> nums = new ArrayList<>();
 		nums.add(Arrays.asList(new Integer[] { 4, 10, 15, 24, 26 }));
-		//nums.add(Arrays.asList(new Integer[] { 0, 9, 12, 20 }));
-		//nums.add(Arrays.asList(new Integer[] { 5, 18, 22, 30 }));
+		nums.add(Arrays.asList(new Integer[] { 0, 9, 12, 20 }));
+		nums.add(Arrays.asList(new Integer[] { 5, 18, 22, 30 }));
 		int[] result = sr.smallestRange(nums);
 		System.out.println(Arrays.toString(result));
 	}
