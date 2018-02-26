@@ -1,7 +1,6 @@
 package ellinx.solutions;
 
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.Stack;
 
 public class BasicCalculator {
 	/**
@@ -23,65 +22,46 @@ public class BasicCalculator {
 	 *
 	 */
 	public int calculateI(String s) {
+		int number = 0;
         int res = 0;
+        int sign = 1;
         int index = 0;
-        char operator = ' ';
+        
         while (index < s.length()) {
-        	if (s.charAt(index) == ' ') {
-        		//white space
-        		index++;
-        	} else if (s.charAt(index) == '+' || s.charAt(index) == '-') {
-        		//operator '+' or '-'
-        		if (operator != ' ') {
-        			System.out.println("error, previous operator is not consumed");
-        		}
-        		operator = s.charAt(index);
-        		index++;
-        	} else if (s.charAt(index) == '(') {
-        		//expression string within ()
-        		int left = 0;
-        		int end = index+1;
-        		while (end < s.length()) {
-        			if (s.charAt(end) == '(')
-        				left++;
-        			else if (s.charAt(end) == ')') {
-        				if (left==0) {
-        					if (operator == ' ')
-        						res = calculateI(s.substring(index+1, end));
-        					else {
-        						int op2 = calculateI(s.substring(index+1, end));
-        						res = (operator=='+')?(res+op2):(res-op2);
-        						operator = ' ';
-        					}
-        					index = end+1;
-        					break;
-        				} else {
-        					left--;
-        				}
-        			}
-        			end++;
-        		}
-        	} else {
-        		//number
-        		int end = index+1;
-        		while (end < s.length()) {
-        			char a = s.charAt(end);
-        			if ( a >= '0' && a <= '9') {
-        				end++;
-        			} else {
-        				break;
-        			}
-        		}
-        		if (operator == ' ')
-					res = Integer.valueOf(s.substring(index, end));
-				else {
-					int op2 = Integer.valueOf(s.substring(index, end));
-					res = (operator=='+')?(res+op2):(res-op2);
-					operator = ' ';
-				}
-        		index = end;
-        	}
+            char a = s.charAt(index);
+            if (Character.isDigit(a)) {
+                number = 10*number+(a-'0');
+            } else if (a=='+') {
+                res += sign*number;
+                sign = 1;
+                number = 0;
+            } else if (a=='-') {
+                res += sign*number;
+                sign = -1;
+                number = 0;
+            } else if (a=='(') {
+                int count = 0;
+                int end = index+1;
+                while (end < s.length()) {
+                    char curChar = s.charAt(end);
+                    if (curChar=='(')
+                        count++;
+                    else if (curChar==')') {
+                        if (count>0)
+                            count--;
+                        else
+                            break;
+                    }
+                    end++;
+                }
+                res += sign*calculateI(s.substring(index+1,end));
+                sign = 1;
+                number = 0;
+                index = end;
+            }
+            index++;
         }
+        res += sign*number;
         return res;
     }
 	
@@ -100,74 +80,46 @@ public class BasicCalculator {
 	 * Note: Do not use the eval built-in library function.
 	 */
 	public int calculateII(String s) {
-        Deque<Character> operators = new LinkedList<>();
-        Deque<Integer> operands = new LinkedList<>();
+		char sign = '+';
+        int number = 0;
+        int res = 0;
         int index = 0;
-        while (index < s.length()) {
-        	char a = s.charAt(index);
-        	if (a == ' ') {
-        		//white space
-        		index++;
-        	} else if (a == '+' || a == '-' || a == '*' || a == '/') {
-        		//operators '+', '-', '*' and '/'
-        		operators.offerLast(a);
-        		index++;
-        	} else {
-        		//number
-        		int end = index+1;
-        		while (end < s.length()) {
-        			char tmp = s.charAt(end);
-        			if (tmp>='0' && tmp<='9') {
-        				end++;
-        			} else {
-        				String numStr = s.substring(index,end);
-        				if (!operators.isEmpty()) {
-        					char prevOp = operators.peekLast();
-            				if (prevOp == '+' || prevOp == '-') {
-            					operands.offerLast(Integer.valueOf(numStr));
-            				} else {
-            					int op1 = operands.pollLast();
-            					int op = operators.pollLast();
-            					int result = Integer.valueOf(numStr);
-            					result = (op=='*')?(op1*result):(op1/result);
-            					operands.offerLast(result);
-            				}
-        				} else {
-        					operands.offerLast(Integer.valueOf(numStr));
-        				}
-        				index = end;
-        				break;
-        			}
-        		}
-        		if (index < end) {
-        			String numStr = s.substring(index,end);
-        			if (!operators.isEmpty()) {
-    					char prevOp = operators.peekLast();
-        				if (prevOp == '+' || prevOp == '-') {
-        					operands.offerLast(Integer.valueOf(numStr));
-        				} else {
-        					int op1 = operands.pollLast();
-        					int op = operators.pollLast();
-        					int result = Integer.valueOf(numStr);
-        					result = (op=='*')?(op1*result):(op1/result);
-        					operands.offerLast(result);
-        				}
-    				} else {
-    					operands.offerLast(Integer.valueOf(numStr));
-    				}
-    				index = end;
-        		}
-        	}
+        Stack<Integer> stack = new Stack<>();
+        
+        while (index <= s.length()) {
+            if (index < s.length() && Character.isDigit(s.charAt(index))) {
+                number = 10*number+(s.charAt(index)-'0');
+            } else if (index == s.length() || s.charAt(index)=='+' || s.charAt(index)=='-' || s.charAt(index)=='*' || s.charAt(index)=='/') {
+                switch(sign) {
+                    case '+':
+                        stack.push(number);
+                        break;
+                    case '-':
+                        stack.push(-number);
+                        break;
+                    case '*':
+                        stack.push(stack.pop()*number);
+                        break;
+                    case '/':
+                        stack.push(stack.pop()/number);
+                        break;
+                    default:
+                        System.out.println("unknown sign error!");
+                        break;
+                }
+                if (index==s.length())
+                    break;
+                
+                sign = s.charAt(index);
+                number = 0;
+            }
+            index++;
         }
         
-        while (!operators.isEmpty()) {
-        	int op1 = operands.pollFirst();
-        	int op2 = operands.pollFirst();
-        	int op = operators.pollFirst();
-        	op2 = (op=='+')?(op1+op2):(op1-op2);
-        	operands.offerFirst(op2);
+        while (!stack.isEmpty()) {
+            res += stack.pop();
         }
-        return operands.pollFirst();
+        return res;
     }
 	
 	//test 
