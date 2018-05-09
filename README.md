@@ -1,2 +1,2 @@
-## Solutions
-Algorithm problem practice.
+## LeetCode
+cpp.
